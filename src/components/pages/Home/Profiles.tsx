@@ -29,15 +29,15 @@ const ProfilesItem = styled.article`
       flex: 1;
     }
 
-    &:nth-child(odd) > * {
+    &:nth-child(even) > * {
       flex-direction: row-reverse;
     }
 
-    &:nth-child(even)::after {
+    &:nth-child(odd)::after {
       background-color: ${(props) => props.theme.colors.gray.light};
     }
 
-    &:nth-child(odd)::before {
+    &:nth-child(even)::before {
       background-color: ${(props) => props.theme.colors.gray.light};
     }
   }
