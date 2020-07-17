@@ -6,7 +6,7 @@ import { Badges } from "./Badges";
 import { FAQ } from "./FAQ";
 import { Profiles } from "./Profiles";
 import { Newsletter } from "./Newsletter";
-import { Footer } from "./Footer";
+import { Footer } from "../../Footer";
 
 export function Home() {
   return (

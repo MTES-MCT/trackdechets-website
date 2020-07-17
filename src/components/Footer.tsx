@@ -1,9 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Container } from "../../Container";
-import { UnstyledList, UnstyledListItem } from "../../List";
-import { Typography } from "../../Typography";
-import { Link } from "../../Link";
+import { Container } from "./Container";
+import { UnstyledList, UnstyledListItem } from "./List";
+import { Typography } from "./Typography";
+import { Link } from "./Link";
 import fabriquenumerique from "./assets/fabriquenumerique.svg";
 
 const FooterContainer = styled.footer`
