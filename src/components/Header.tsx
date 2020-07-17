@@ -85,7 +85,7 @@ export function Header() {
               </HeaderNavLink>
             </InlineListItem>
             <InlineListItem>
-              <HeaderNavLink href="https://trackdechets.beta.gouv.fr/partners">
+              <HeaderNavLink as={RouterLink} to="/partners">
                 Partenaires
               </HeaderNavLink>
             </InlineListItem>
