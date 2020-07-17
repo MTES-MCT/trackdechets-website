@@ -14,17 +14,34 @@ const ProfilesHeading = styled(Typography).attrs({ as: "h2", variant: "h2" })`
 
 const ProfilesItem = styled.article`
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
   margin-bottom: ${(props) => props.theme.spacing(13)};
 
   &:last-child {
     margin-bottom: 0;
   }
 
-  &:nth-child(odd) {
-    flex-direction: row;
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
   }
+
+  &:nth-child(odd) > * {
+    flex-direction: row-reverse;
+  }
+
+  &:nth-child(even)::after {
+    background-color: ${(props) => props.theme.colors.gray.light};
+  }
+
+  &:nth-child(odd)::before {
+    background-color: ${(props) => props.theme.colors.gray.light};
+  }
+`;
+const ProfilesItemInner = styled(Container)`
+  display: flex;
+  align-items: center;
+  padding: 0;
 `;
 const ProfilesItemContent = styled.div`
   flex: 1;
@@ -39,7 +56,7 @@ const ProfilesItemList = styled(List)`
   }
 `;
 const ProfilesItemIllustration = styled.div`
-  padding: ${(props) => props.theme.spacing(4)};
+  padding: 0 ${(props) => props.theme.spacing(4)};
 `;
 
 export function Profiles() {
@@ -49,7 +66,9 @@ export function Profiles() {
         <ProfilesHeading>
           En quoi je suis concerné(e) par Trackdéchets ?
         </ProfilesHeading>
-        <ProfilesItem>
+      </ProfilesInnerContainer>
+      <ProfilesItem>
+        <ProfilesItemInner>
           <ProfilesItemIllustration>
             <img src="https://placehold.it/335x335" alt="" />
           </ProfilesItemIllustration>
@@ -98,8 +117,10 @@ export function Profiles() {
               </ListItem>
             </ProfilesItemList>
           </ProfilesItemContent>
-        </ProfilesItem>
-        <ProfilesItem>
+        </ProfilesItemInner>
+      </ProfilesItem>
+      <ProfilesItem>
+        <ProfilesItemInner>
           <ProfilesItemIllustration>
             <img src="https://placehold.it/335x335" alt="" />
           </ProfilesItemIllustration>
@@ -144,8 +165,10 @@ export function Profiles() {
               </ListItem>
             </ProfilesItemList>
           </ProfilesItemContent>
-        </ProfilesItem>
-        <ProfilesItem>
+        </ProfilesItemInner>
+      </ProfilesItem>
+      <ProfilesItem>
+        <ProfilesItemInner>
           <ProfilesItemIllustration>
             <img src="https://placehold.it/335x335" alt="" />
           </ProfilesItemIllustration>
@@ -189,8 +212,8 @@ export function Profiles() {
               </ListItem>
             </ProfilesItemList>
           </ProfilesItemContent>
-        </ProfilesItem>
-      </ProfilesInnerContainer>
+        </ProfilesItemInner>
+      </ProfilesItem>
     </ProfilesContainer>
   );
 }
