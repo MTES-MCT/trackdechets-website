@@ -18,9 +18,36 @@ const HeaderInnerContainer = styled(Container)`
   align-items: center;
 `;
 const HeaderLogos = styled.div`
-  flex: 1;
+  white-space: nowrap;
+  padding-right: ${(props) => props.theme.spacing(2)};
+
+  @media ${(props) => props.theme.breakpoints.up("medium")} {
+    flex: 1;
+  }
 `;
-const HeaderNav = styled.nav``;
+const HeaderNav = styled.nav`
+  > * {
+    margin-bottom: ${(props) => props.theme.spacing(1)};
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media ${(props) => props.theme.breakpoints.up("medium")} {
+    display: flex;
+    align-items: center;
+
+    > * {
+      margin-bottom: 0;
+      margin-right: ${(props) => props.theme.spacing(2)};
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+`;
 const HeaderNavLink = styled(Link)`
   color: inherit;
   text-decoration: none;
@@ -52,6 +79,8 @@ export function Header() {
             <InlineListItem>
               <HeaderNavLink href="/">Partenaires</HeaderNavLink>
             </InlineListItem>
+          </InlineList>
+          <InlineList>
             <InlineListItem>
               <Button variant="ghost" as="a" href="/">
                 Créer un compte

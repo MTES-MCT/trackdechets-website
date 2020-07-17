@@ -1,17 +1,23 @@
 import * as React from "react";
 import styled, { css } from "styled-components";
 
-const ButtonIcon = styled.span`
+const ButtonIcon = styled.span<{ position: "start" | "end" }>`
   display: inline-block;
   vertical-align: text-top;
 
-  &:first-child {
-    margin-right: ${(props) => props.theme.spacing(1)};
-  }
-
-  &:last-child {
-    margin-left: ${(props) => props.theme.spacing(1)};
-  }
+  ${(props) => {
+    switch (props.position) {
+      case "start":
+        return css`
+          margin-right: ${props.theme.spacing(1)};
+        `;
+      case "end":
+      default:
+        return css`
+          margin-left: ${props.theme.spacing(1)};
+        `;
+    }
+  }}
 `;
 
 interface ButtonContainerProps {
@@ -28,6 +34,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   padding: 0;
   text-decoration: none;
 
+  display: inline-block;
   cursor: pointer;
   border: 1px solid transparent;
   white-space: nowrap;
@@ -96,9 +103,9 @@ export function Button({
 }: ButtonProps) {
   return (
     <ButtonContainer {...props}>
-      {startIcon && <ButtonIcon>{startIcon}</ButtonIcon>}
+      {startIcon && <ButtonIcon position="start">{startIcon}</ButtonIcon>}
       {children}
-      {endIcon && <ButtonIcon>{endIcon}</ButtonIcon>}
+      {endIcon && <ButtonIcon position="end">{endIcon}</ButtonIcon>}
     </ButtonContainer>
   );
 }
