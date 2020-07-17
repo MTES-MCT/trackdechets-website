@@ -6,6 +6,8 @@ export const Link = styled.a`
   text-decoration: underline;
   outline: none;
   position: relative;
+  display: inline-block;
+  vertical-align: baseline;
 
   &:focus::before {
     content: "";
