@@ -30,6 +30,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
 
   cursor: pointer;
   border: 1px solid transparent;
+  white-space: nowrap;
   position: relative;
 
   &:focus::before {
