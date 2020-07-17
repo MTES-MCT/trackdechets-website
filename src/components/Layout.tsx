@@ -78,7 +78,7 @@ interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
   return (
     <ThemeProvider theme={theme}>
-      <Helmet title="Trackdéchets" />
+      <Helmet title="Trackdéchets | La traçabilité des déchets en toute sécurité" />
       <GlobalStyle />
       {children}
     </ThemeProvider>
