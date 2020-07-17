@@ -47,7 +47,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     right: -4px;
     bottom: -4px;
     left: -4px;
-    border: 2px solid ${(props) => props.theme.colors.primary.light};
+    border: 2px solid ${(props) => props.theme.colors.common.focus};
     pointer-events: none;
   }
 
@@ -58,17 +58,29 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
           color: ${props.theme.colors.primary.main};
           background-color: transparent;
           border-color: ${props.theme.colors.primary.main};
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+          }
         `;
       case "secondary":
         return css`
           color: ${props.theme.colors.secondary.contrastText};
           background-color: ${props.theme.colors.secondary.main};
+
+          &:hover {
+            background-color: ${props.theme.colors.secondary.dark};
+          }
         `;
       case "primary":
       default:
         return css`
           color: ${props.theme.colors.primary.contrastText};
           background-color: ${props.theme.colors.primary.main};
+
+          &:hover {
+            background-color: ${props.theme.colors.primary.dark};
+          }
         `;
     }
   }}

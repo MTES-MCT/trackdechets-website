@@ -24,16 +24,18 @@ declare module "styled-components" {
     };
     colors: {
       common: {
+        focus: string;
         black: string;
         white: string;
       };
       primary: {
         contrastText: string;
+        dark: string;
         main: string;
-        light: string;
       };
       secondary: {
         contrastText: string;
+        dark: string;
         main: string;
       };
       text: {

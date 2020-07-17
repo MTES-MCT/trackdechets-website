@@ -52,6 +52,10 @@ const HeaderNavLink = styled(Link)`
   color: inherit;
   text-decoration: none;
   font-weight: bold;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary.main};
+  }
 `;
 
 export function Header() {

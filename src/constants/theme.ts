@@ -27,16 +27,18 @@ export const theme: DefaultTheme = {
   },
   colors: {
     common: {
+      focus: "#549bfe",
       black: "#060606",
       white: "#fff",
     },
     primary: {
       contrastText: "#fff",
+      dark: "#000075",
       main: "#000092",
-      light: "#549bfe",
     },
     secondary: {
       contrastText: "#fff",
+      dark: "#cb0005",
       main: "#e20007",
     },
     text: {

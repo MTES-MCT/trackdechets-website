@@ -16,7 +16,7 @@ export const Link = styled.a`
     right: -4px;
     bottom: -4px;
     left: -4px;
-    border: 2px solid ${(props) => props.theme.colors.primary.light};
+    border: 2px solid ${(props) => props.theme.colors.common.focus};
     pointer-events: none;
   }
 `;

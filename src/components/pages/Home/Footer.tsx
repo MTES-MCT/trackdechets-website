@@ -62,25 +62,27 @@ export function Footer() {
           </Typography>
           <UnstyledList>
             <UnstyledListItem>
-              <FooterLink>Nous contacter</FooterLink>
+              <FooterLink href="/">Nous contacter</FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink>Foire aux questions</FooterLink>
+              <FooterLink href="/">Foire aux questions</FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink>Espace développeur</FooterLink>
+              <FooterLink href="/">Espace développeur</FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink>Conditions générales d'utilisation</FooterLink>
+              <FooterLink href="/">
+                Conditions générales d'utilisation
+              </FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink>Politique de confidentialité</FooterLink>
+              <FooterLink href="/">Politique de confidentialité</FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink>Statistiques</FooterLink>
+              <FooterLink href="/">Statistiques</FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink>Boîte à outils communication</FooterLink>
+              <FooterLink href="/">Boîte à outils communication</FooterLink>
             </UnstyledListItem>
           </UnstyledList>
         </FooterLinks>
