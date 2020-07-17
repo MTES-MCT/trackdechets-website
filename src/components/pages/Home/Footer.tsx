@@ -4,6 +4,7 @@ import { Container } from "../../Container";
 import { UnstyledList, UnstyledListItem } from "../../List";
 import { Typography } from "../../Typography";
 import { Link } from "../../Link";
+import fabriquenumerique from "./assets/fabriquenumerique.svg";
 
 const FooterContainer = styled.footer`
   padding: ${(props) => props.theme.spacing(5)} 0;
@@ -46,8 +47,9 @@ export function Footer() {
         <FooterSummary>
           <FooterSummaryLogo>
             <img
-              src="https://placehold.it/160x160"
+              src={fabriquenumerique}
               alt="Logo de La Fabrique Numérique"
+              width="150"
             />
           </FooterSummaryLogo>
           <FooterSummaryContent>
