@@ -1,0 +1,196 @@
+import * as React from "react";
+import styled from "styled-components";
+import { Container } from "../../Container";
+import { Typography } from "../../Typography";
+import { List, ListItem } from "../../List";
+
+const ProfilesContainer = styled.section`
+  padding-top: ${(props) => props.theme.spacing(13)};
+`;
+const ProfilesInnerContainer = styled(Container)``;
+const ProfilesHeading = styled(Typography).attrs({ as: "h2", variant: "h2" })`
+  margin-bottom: ${(props) => props.theme.spacing(6)};
+`;
+
+const ProfilesItem = styled.article`
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-bottom: ${(props) => props.theme.spacing(13)};
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:nth-child(odd) {
+    flex-direction: row;
+  }
+`;
+const ProfilesItemContent = styled.div`
+  flex: 1;
+  padding: ${(props) => props.theme.spacing(4)};
+  background-color: ${(props) => props.theme.colors.gray.light};
+`;
+const ProfilesItemList = styled(List)`
+  margin-bottom: ${(props) => props.theme.spacing(2)};
+
+  &:last-child {
+    margin-bottom 0;
+  }
+`;
+const ProfilesItemIllustration = styled.div`
+  padding: ${(props) => props.theme.spacing(4)};
+`;
+
+export function Profiles() {
+  return (
+    <ProfilesContainer>
+      <ProfilesInnerContainer>
+        <ProfilesHeading>
+          En quoi je suis concerné(e) par Trackdéchets ?
+        </ProfilesHeading>
+        <ProfilesItem>
+          <ProfilesItemIllustration>
+            <img src="https://placehold.it/335x335" alt="" />
+          </ProfilesItemIllustration>
+          <ProfilesItemContent>
+            <Typography variant="body1" gutterBottom>
+              <strong>Producteur</strong>
+            </Typography>
+            <Typography>
+              <strong>Qu’est-ce que je peux faire avec Trackdéchets ?</strong>
+            </Typography>
+            <ProfilesItemList>
+              <ListItem>
+                Je peux éditer moi-même ou co-éditer mes Bordereaux de Suivi de
+                Déchets (BSD)
+              </ListItem>
+              <ListItem>
+                Je peux signer l’enlèvement de mes déchets de manière
+                dématérialisée
+              </ListItem>
+              <ListItem>
+                Je peux suivre tous mes BSD en temps réel dans un tableau de
+                bord unique
+              </ListItem>
+              <ListItem>
+                Je dispose d’un registre réglementaire automatiquement à jour
+                incluant tous mes BSD, quelques soient mes prestataires
+              </ListItem>
+              <ListItem>
+                Je peux vérifier les autorisations réglementaires de mes
+                prestataires déchets
+              </ListItem>
+            </ProfilesItemList>
+
+            <Typography>
+              <strong>En quoi ça simplifie mes pratiques ?</strong>
+            </Typography>
+            <ProfilesItemList>
+              <ListItem>
+                Plus besoin de papier à préparer, transmettre, archiver
+              </ListItem>
+              <ListItem>Fini les relances à mes prestataires</ListItem>
+              <ListItem>
+                Plus besoin d’archivage et de compilation pour consolider mon
+                registre réglementaire Sécurité/ transparence sur les
+                prestataires avec qui je travaille
+              </ListItem>
+            </ProfilesItemList>
+          </ProfilesItemContent>
+        </ProfilesItem>
+        <ProfilesItem>
+          <ProfilesItemIllustration>
+            <img src="https://placehold.it/335x335" alt="" />
+          </ProfilesItemIllustration>
+          <ProfilesItemContent>
+            <Typography variant="body1" gutterBottom>
+              <strong>Professionnel des déchets</strong>
+            </Typography>
+
+            <Typography>
+              <strong>Qu’est-ce que je peux faire avec Trackdéchets ?</strong>
+            </Typography>
+            <ProfilesItemList>
+              <ListItem>
+                Je peux connecter mon outil / mon ERP à Trackdéchets afin de
+                recevoir et transmettre les informations de traçabilité en temps
+                réel
+              </ListItem>
+              <ListItem>
+                Je peux faire signer mes BSD de façon dématérialisée par mes
+                clients et transporteurs
+              </ListItem>
+              <ListItem>
+                Je peux éditer des Bordereaux de Suivi pour mes clients (si je
+                n’ai pas déjà un outil pour le faire)
+              </ListItem>
+            </ProfilesItemList>
+
+            <Typography>
+              <strong>En quoi ça simplifie mes pratiques ?</strong>
+            </Typography>
+            <ProfilesItemList>
+              <ListItem>
+                Plus besoin de papier à préparer, transmettre, archiver
+              </ListItem>
+              <ListItem>
+                Plus besoin de m’adapter aux différentes pratiques de mes
+                clients et partenaires pour gérer mes BSD
+              </ListItem>
+              <ListItem>
+                Plus besoin de retourner les BSD à mes clients qui sont informés
+                au fil de l'eau de l'état de leurs déchets
+              </ListItem>
+            </ProfilesItemList>
+          </ProfilesItemContent>
+        </ProfilesItem>
+        <ProfilesItem>
+          <ProfilesItemIllustration>
+            <img src="https://placehold.it/335x335" alt="" />
+          </ProfilesItemIllustration>
+          <ProfilesItemContent>
+            <Typography variant="body1" gutterBottom>
+              <strong>Transporteur de déchets</strong>
+            </Typography>
+
+            <Typography>
+              <strong>Qu’est-ce que je peux faire avec Trackdéchets ?</strong>
+            </Typography>
+            <ProfilesItemList>
+              <ListItem>
+                Je peux signer l’enlèvement du déchet sur site de façon
+                dématérialisée
+              </ListItem>
+              <ListItem>
+                Je peux avoir une vue d’ensemble sur mes collectes en cours ou à
+                venir dans un tableau de bord unique
+              </ListItem>
+              <ListItem>
+                Je peux télécharger un registre réglementaire automatiquement à
+                jour incluant tous mes BSD, quelques soient mes clients
+              </ListItem>
+              <ListItem>
+                Je peux générer des bordereaux de suivi de déchets pour mes
+                clients
+              </ListItem>
+            </ProfilesItemList>
+
+            <Typography>
+              <strong>En quoi ça simplifie mes pratiques ?</strong>
+            </Typography>
+            <ProfilesItemList>
+              <ListItem>
+                Plus besoin de papier à préparer, transmettre, archiver
+              </ListItem>
+              <ListItem>
+                Plus besoin de présenter un BSD papier en cas de contrôle
+                routier
+              </ListItem>
+            </ProfilesItemList>
+          </ProfilesItemContent>
+        </ProfilesItem>
+      </ProfilesInnerContainer>
+    </ProfilesContainer>
+  );
+}
