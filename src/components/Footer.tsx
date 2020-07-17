@@ -6,6 +6,7 @@ import { UnstyledList, UnstyledListItem } from "./List";
 import { Typography } from "./Typography";
 import { Link } from "./Link";
 import fabriquenumerique from "./assets/fabriquenumerique.svg";
+import politiquedeconfidentialite from "./assets/politique-de-confidentialite.pdf";
 
 const FooterContainer = styled.footer`
   padding: ${(props) => props.theme.spacing(5)} 0;
@@ -86,7 +87,7 @@ export function Footer() {
               </FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink href="https://trackdechets.beta.gouv.fr/Politique%20de%20confidentialit%C3%A9.pdf">
+              <FooterLink href={politiquedeconfidentialite}>
                 Politique de confidentialité
               </FooterLink>
             </UnstyledListItem>
