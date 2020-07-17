@@ -81,7 +81,7 @@ export function Footer() {
               </FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink as={RouterLink} href="/cgu">
+              <FooterLink as={RouterLink} to="/cgu">
                 Conditions générales d'utilisation
               </FooterLink>
             </UnstyledListItem>
