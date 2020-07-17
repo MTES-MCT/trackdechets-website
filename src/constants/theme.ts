@@ -1,5 +1,9 @@
 import { DefaultTheme } from "styled-components";
 
+const breakpoints = {
+  medium: "60rem",
+};
+
 export const theme: DefaultTheme = {
   typography: {
     h1: {
@@ -45,4 +49,7 @@ export const theme: DefaultTheme = {
     },
   },
   spacing: (unit: number) => `${unit * 0.5}rem`,
+  breakpoints: {
+    up: (size: "medium") => `(min-width: ${breakpoints[size]})`,
+  },
 };

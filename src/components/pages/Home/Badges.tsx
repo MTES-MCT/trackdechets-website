@@ -9,7 +9,14 @@ const BadgesContainer = styled.section`
 `;
 const BadgesInnerContainer = styled(Container)`
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+
+  @media ${(props) => props.theme.breakpoints.up("medium")} {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
 `;
 const BadgeItem = styled.div`
   display: flex;
@@ -18,6 +25,15 @@ const BadgeItem = styled.div`
   text-align: center;
   max-width: 20rem;
   width: 100%;
+  margin-bottom: ${(props) => props.theme.spacing(4)};
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media ${(props) => props.theme.breakpoints.up("medium")} {
+    margin-bottom: 0;
+  }
 `;
 const BadgeItemCircle = styled.div`
   width: 160px;

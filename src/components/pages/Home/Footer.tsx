@@ -11,8 +11,10 @@ const FooterContainer = styled.footer`
   background-color: ${(props) => props.theme.colors.common.black};
 `;
 const FooterInnerContainer = styled(Container)`
-  display: flex;
-  align-items: center;
+  @media ${(props) => props.theme.breakpoints.up("medium")} {
+    display: flex;
+    align-items: center;
+  }
 `;
 const FooterLink = styled(Link)`
   color: ${(props) => props.theme.colors.common.white};
@@ -23,6 +25,11 @@ const FooterSummary = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  margin-bottom: ${(props) => props.theme.spacing(2)};
+
+  @media ${(props) => props.theme.breakpoints.up("medium")} {
+    margin-bottom: 0;
+  }
 `;
 const FooterSummaryLogo = styled.div``;
 const FooterSummaryContent = styled.div`

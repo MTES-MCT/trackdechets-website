@@ -5,7 +5,11 @@ import { Typography } from "../../Typography";
 import { Link } from "../../Link";
 
 const FAQContainer = styled.section`
-  padding-top: ${(props) => props.theme.spacing(13)};
+  padding-top: ${(props) => props.theme.spacing(6)};
+
+  @media ${(props) => props.theme.breakpoints.up("medium")} {
+    padding-top: ${(props) => props.theme.spacing(12)};
+  }
 `;
 const FAQInnerContainer = styled(Container)``;
 const FAQHeading = styled(Typography).attrs({ as: "h2", variant: "h2" })`
@@ -14,8 +18,12 @@ const FAQHeading = styled(Typography).attrs({ as: "h2", variant: "h2" })`
 
 const FAQQuestions = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: ${(props) => props.theme.spacing(4)};
+
+  @media ${(props) => props.theme.breakpoints.up("medium")} {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 const FAQQuestionsItem = styled.article``;
 const FAQQuestionsItemQuestion = styled(Typography).attrs({
@@ -24,11 +32,14 @@ const FAQQuestionsItemQuestion = styled(Typography).attrs({
   margin-bottom: ${(props) => props.theme.spacing(2)};
 `;
 const FAQQuestionsItemAnswer = styled(Typography)`
-  padding-left: ${(props) => props.theme.spacing(13)};
   margin-bottom: ${(props) => props.theme.spacing(1)};
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media ${(props) => props.theme.breakpoints.up("medium")} {
+    padding-left: ${(props) => props.theme.spacing(13)};
   }
 `;
 

@@ -14,34 +14,40 @@ const ProfilesHeading = styled(Typography).attrs({ as: "h2", variant: "h2" })`
 
 const ProfilesItem = styled.article`
   display: flex;
-  margin-bottom: ${(props) => props.theme.spacing(13)};
+  margin-bottom: ${(props) => props.theme.spacing(6)};
 
   &:last-child {
     margin-bottom: 0;
   }
 
-  &::before,
-  &::after {
-    content: "";
-    flex: 1;
-  }
+  @media ${(props) => props.theme.breakpoints.up("medium")} {
+    margin-bottom: ${(props) => props.theme.spacing(12)};
 
-  &:nth-child(odd) > * {
-    flex-direction: row-reverse;
-  }
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+    }
 
-  &:nth-child(even)::after {
-    background-color: ${(props) => props.theme.colors.gray.light};
-  }
+    &:nth-child(odd) > * {
+      flex-direction: row-reverse;
+    }
 
-  &:nth-child(odd)::before {
-    background-color: ${(props) => props.theme.colors.gray.light};
+    &:nth-child(even)::after {
+      background-color: ${(props) => props.theme.colors.gray.light};
+    }
+
+    &:nth-child(odd)::before {
+      background-color: ${(props) => props.theme.colors.gray.light};
+    }
   }
 `;
 const ProfilesItemInner = styled(Container)`
-  display: flex;
-  align-items: center;
-  padding: 0;
+  @media ${(props) => props.theme.breakpoints.up("medium")} {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
 `;
 const ProfilesItemContent = styled.div`
   flex: 1;
@@ -56,7 +62,16 @@ const ProfilesItemList = styled(List)`
   }
 `;
 const ProfilesItemIllustration = styled.div`
-  padding: 0 ${(props) => props.theme.spacing(4)};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: ${(props) => props.theme.spacing(4)};
+
+  @media ${(props) => props.theme.breakpoints.up("medium")} {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 `;
 
 export function Profiles() {
