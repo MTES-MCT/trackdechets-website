@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import { Link as RouterLink } from "gatsby";
 import { Container } from "./Container";
 import { UnstyledList, UnstyledListItem } from "./List";
 import { Typography } from "./Typography";
@@ -80,7 +81,7 @@ export function Footer() {
               </FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink href="https://trackdechets.beta.gouv.fr/cgu">
+              <FooterLink as={RouterLink} href="/cgu">
                 Conditions générales d'utilisation
               </FooterLink>
             </UnstyledListItem>
