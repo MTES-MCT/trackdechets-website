@@ -55,7 +55,8 @@ export function Footer() {
           <FooterSummaryContent>
             Trackdéchets est un service numérique de l'Etat incubé à la Fabrique
             Numérique du Ministère de la Transition écologique et solidaire,
-            membre du réseau d’incubateurs beta.gouv.fr
+            membre du réseau d’incubateurs{" "}
+            <FooterLink href="https://beta.gouv.fr/">beta.gouv.fr</FooterLink>
           </FooterSummaryContent>
         </FooterSummary>
         <FooterLinks>
@@ -64,27 +65,39 @@ export function Footer() {
           </Typography>
           <UnstyledList>
             <UnstyledListItem>
-              <FooterLink href="/">Nous contacter</FooterLink>
+              <FooterLink href="mailto:emmanuel.flahaut@developpement-durable.gouv.fr">
+                Nous contacter
+              </FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink href="/">Foire aux questions</FooterLink>
+              <FooterLink href="https://faq.trackdechets.fr/">
+                Foire aux questions
+              </FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink href="/">Espace développeur</FooterLink>
+              <FooterLink href="https://developers.trackdechets.beta.gouv.fr/">
+                Espace développeur
+              </FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink href="/">
+              <FooterLink href="https://trackdechets.beta.gouv.fr/cgu">
                 Conditions générales d'utilisation
               </FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink href="/">Politique de confidentialité</FooterLink>
+              <FooterLink href="https://trackdechets.beta.gouv.fr/Politique%20de%20confidentialit%C3%A9.pdf">
+                Politique de confidentialité
+              </FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink href="/">Statistiques</FooterLink>
+              <FooterLink href="https://trackdechets.beta.gouv.fr/stats">
+                Statistiques
+              </FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink href="/">Boîte à outils communication</FooterLink>
+              <FooterLink href="https://drive.google.com/open?id=1To5yrG6jO3-bh9jRqyi334mXT1LqGCjE">
+                Boîte à outils communication
+              </FooterLink>
             </UnstyledListItem>
           </UnstyledList>
         </FooterLinks>

@@ -78,7 +78,10 @@ export function FAQ() {
             <FAQQuestionsItemAnswer>
               Si vous avez un outil, vous pourrez le connecter à la plateforme
               grâce à l’API Trackdéchets. Pour savoir plus consultez{" "}
-              <Link>la documentation Développeur</Link>.
+              <Link href="https://developers.trackdechets.beta.gouv.fr/">
+                la documentation Développeur
+              </Link>
+              .
             </FAQQuestionsItemAnswer>
           </FAQQuestionsItem>
           <FAQQuestionsItem>
@@ -95,7 +98,9 @@ export function FAQ() {
           <FAQQuestionsItem>
             <FAQQuestionsItemQuestion>
               D’autres questions sur Trackdéchets ?<br />
-              <Link>Consultez notre FAQ.</Link>
+              <Link href="https://faq.trackdechets.fr/">
+                Consultez notre FAQ.
+              </Link>
             </FAQQuestionsItemQuestion>
             <img src="https://placehold.it/500x290" alt="" />
           </FAQQuestionsItem>

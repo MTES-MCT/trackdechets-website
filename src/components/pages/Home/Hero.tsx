@@ -59,7 +59,12 @@ export function Hero() {
             Gérer la traçabilité des déchets en toute sécurité
           </HeroHeading>
           <HeroAction>
-            <Button variant="secondary" size="large">
+            <Button
+              variant="secondary"
+              size="large"
+              as="a"
+              href="https://trackdechets.beta.gouv.fr/signup"
+            >
               Créer un compte
             </Button>
           </HeroAction>

@@ -75,23 +75,37 @@ export function Header() {
         <HeaderNav>
           <InlineList>
             <InlineListItem>
-              <HeaderNavLink href="/">Foire aux questions</HeaderNavLink>
+              <HeaderNavLink href="https://faq.trackdechets.fr/">
+                Foire aux questions
+              </HeaderNavLink>
             </InlineListItem>
             <InlineListItem>
-              <HeaderNavLink href="/">Développeurs</HeaderNavLink>
+              <HeaderNavLink href="https://developers.trackdechets.beta.gouv.fr/">
+                Développeurs
+              </HeaderNavLink>
             </InlineListItem>
             <InlineListItem>
-              <HeaderNavLink href="/">Partenaires</HeaderNavLink>
+              <HeaderNavLink href="https://trackdechets.beta.gouv.fr/partners">
+                Partenaires
+              </HeaderNavLink>
             </InlineListItem>
           </InlineList>
           <InlineList>
             <InlineListItem>
-              <Button variant="ghost" as="a" href="/">
+              <Button
+                variant="ghost"
+                as="a"
+                href="https://trackdechets.beta.gouv.fr/signup"
+              >
                 Créer un compte
               </Button>
             </InlineListItem>
             <InlineListItem>
-              <Button as="a" href="/" endIcon={<RiAccountCircleLine />}>
+              <Button
+                as="a"
+                href="https://trackdechets.beta.gouv.fr/login"
+                endIcon={<RiAccountCircleLine />}
+              >
                 Se connecter
               </Button>
             </InlineListItem>
