@@ -92,7 +92,7 @@ export function Footer() {
               </FooterLink>
             </UnstyledListItem>
             <UnstyledListItem>
-              <FooterLink href="https://trackdechets.beta.gouv.fr/stats">
+              <FooterLink as={RouterLink} to="/stats">
                 Statistiques
               </FooterLink>
             </UnstyledListItem>
