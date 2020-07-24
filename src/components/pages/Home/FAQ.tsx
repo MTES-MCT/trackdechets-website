@@ -1,22 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { Container } from "../../Container";
-import { Typography } from "../../Typography";
 import { Link } from "../../Link";
 import { Question, QuestionQuestion, QuestionAnswer } from "../../Question";
+import { Section, SectionHeading } from "../../Section";
 import illustrationFAQ from "./assets/illustrationFAQ.svg";
-
-const FAQContainer = styled.section`
-  padding-top: ${(props) => props.theme.spacing(6)};
-
-  @media ${(props) => props.theme.breakpoints.up("medium")} {
-    padding-top: ${(props) => props.theme.spacing(12)};
-  }
-`;
-const FAQInnerContainer = styled(Container)``;
-const FAQHeading = styled(Typography).attrs({ as: "h2", variant: "h2" })`
-  margin-bottom: ${(props) => props.theme.spacing(6)};
-`;
 
 const FAQQuestions = styled.div`
   display: grid;
@@ -30,9 +18,9 @@ const FAQQuestions = styled.div`
 
 export function FAQ() {
   return (
-    <FAQContainer>
-      <FAQInnerContainer>
-        <FAQHeading>Ce qu'il faut savoir sur Trackdéchets</FAQHeading>
+    <Section>
+      <Container>
+        <SectionHeading>Ce qu'il faut savoir sur Trackdéchets</SectionHeading>
         <FAQQuestions>
           <Question>
             <QuestionQuestion>
@@ -90,7 +78,7 @@ export function FAQ() {
             <img src={illustrationFAQ} alt="" />
           </Question>
         </FAQQuestions>
-      </FAQInnerContainer>
-    </FAQContainer>
+      </Container>
+    </Section>
   );
 }

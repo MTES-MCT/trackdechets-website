@@ -3,17 +3,10 @@ import styled from "styled-components";
 import { Container } from "../../Container";
 import { Typography } from "../../Typography";
 import { List, ListItem } from "../../List";
+import { Section, SectionHeading } from "../../Section";
 import illustrationProducer from "./assets/illustrationProducer.svg";
 import illustrationCollector from "./assets/illustrationCollector.svg";
 import illustrationTransporter from "./assets/illustrationTransporter.svg";
-
-const ProfilesContainer = styled.section`
-  padding-top: ${(props) => props.theme.spacing(13)};
-`;
-const ProfilesInnerContainer = styled(Container)``;
-const ProfilesHeading = styled(Typography).attrs({ as: "h2", variant: "h2" })`
-  margin-bottom: ${(props) => props.theme.spacing(6)};
-`;
 
 const ProfilesItem = styled.article`
   display: flex;
@@ -79,12 +72,12 @@ const ProfilesItemIllustration = styled.div`
 
 export function Profiles() {
   return (
-    <ProfilesContainer>
-      <ProfilesInnerContainer>
-        <ProfilesHeading>
+    <Section>
+      <Container>
+        <SectionHeading>
           En quoi je suis concerné(e) par Trackdéchets ?
-        </ProfilesHeading>
-      </ProfilesInnerContainer>
+        </SectionHeading>
+      </Container>
       <ProfilesItem>
         <ProfilesItemInner>
           <ProfilesItemIllustration>
@@ -232,6 +225,6 @@ export function Profiles() {
           </ProfilesItemContent>
         </ProfilesItemInner>
       </ProfilesItem>
-    </ProfilesContainer>
+    </Section>
   );
 }

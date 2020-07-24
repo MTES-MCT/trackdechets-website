@@ -7,6 +7,7 @@ import { Container } from "../Container";
 import { Typography } from "../Typography";
 import { Question, QuestionQuestion, QuestionAnswer } from "../Question";
 import { Button } from "../Button";
+import { Section, SectionHeading } from "../Section";
 import kerlog from "./Partners/assets/kerlog.png";
 import chimirec from "./Partners/assets/chimirec.png";
 import sarpi from "./Partners/assets/sarpi.png";
@@ -22,28 +23,6 @@ import eloenergie from "./Partners/assets/elo-energie.png";
 import norauto from "./Partners/assets/norauto.png";
 import takeawaste from "./Partners/assets/takeawaste.png";
 
-const Section = styled.section`
-  padding-top: ${(props) => props.theme.spacing(6)};
-
-  &:last-of-type {
-    padding-bottom: ${(props) => props.theme.spacing(6)};
-  }
-
-  @media ${(props) => props.theme.breakpoints.up("medium")} {
-    padding-top: ${(props) => props.theme.spacing(12)};
-
-    &:last-of-type {
-      padding-bottom: ${(props) => props.theme.spacing(12)};
-    }
-  }
-`;
-
-const BecomePartnerHeading = styled(Typography).attrs({
-  as: "h2",
-  variant: "h2",
-})`
-  margin-bottom: ${(props) => props.theme.spacing(6)};
-`;
 const BecomePartnerQuestions = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -54,12 +33,6 @@ const BecomePartnerQuestions = styled.div`
   }
 `;
 
-const PartnersHeading = styled(Typography).attrs({
-  as: "h2",
-  variant: "h2",
-})`
-  margin-bottom: ${(props) => props.theme.spacing(6)};
-`;
 const PartnersLogos = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -119,7 +92,7 @@ export function Partners() {
       </Section>
       <Section>
         <Container>
-          <BecomePartnerHeading>Devenir partenaire</BecomePartnerHeading>
+          <SectionHeading>Devenir partenaire</SectionHeading>
 
           <BecomePartnerQuestions>
             <Question>
@@ -167,7 +140,7 @@ export function Partners() {
       </Section>
       <Section>
         <Container>
-          <PartnersHeading>Nos partenaires actuels</PartnersHeading>
+          <SectionHeading>Nos partenaires actuels</SectionHeading>
           <PartnersLogos>
             <PartnersLogosItem>
               <img src={kerlog} alt="Kerlog" />

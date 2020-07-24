@@ -7,14 +7,9 @@ import { Typography } from "../Typography";
 import { Container } from "../Container";
 import { Link } from "../Link";
 import { List, ListItem } from "../List";
+import { Section } from "../Section";
 
-const CGUContainer = styled.section`
-  padding: ${(props) => props.theme.spacing(6)} 0;
-
-  @media ${(props) => props.theme.breakpoints.up("medium")} {
-    padding: ${(props) => props.theme.spacing(12)} 0;
-  }
-
+const CGUContainer = styled(Section)`
   h1 {
     margin-top: 0;
     margin-bottom: ${(props) => props.theme.spacing(4)};

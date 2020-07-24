@@ -3,15 +3,9 @@ import styled from "styled-components";
 import { Button } from "../../Button";
 import { Container } from "../../Container";
 import { Typography } from "../../Typography";
+import { Section } from "../../Section";
 import illustrationHero from "./assets/illustrationHero.png";
 
-const HeroContainer = styled.section`
-  padding: ${(props) => props.theme.spacing(6)} 0;
-
-  @media ${(props) => props.theme.breakpoints.up("medium")} {
-    padding: ${(props) => props.theme.spacing(12)} 0;
-  }
-`;
 const HeroInnerContainer = styled(Container)`
   display: flex;
   flex-direction: column;
@@ -50,7 +44,7 @@ const HeroIllustration = styled.div`
 
 export function Hero() {
   return (
-    <HeroContainer>
+    <Section>
       <HeroInnerContainer>
         <HeroIllustration>
           <img src={illustrationHero} alt="" width="640" />
@@ -71,6 +65,6 @@ export function Hero() {
           </HeroAction>
         </HeroContent>
       </HeroInnerContainer>
-    </HeroContainer>
+    </Section>
   );
 }
