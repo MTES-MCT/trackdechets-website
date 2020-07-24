@@ -101,6 +101,11 @@ export function Footer() {
                 Boîte à outils communication
               </FooterLink>
             </UnstyledListItem>
+            <UnstyledListItem>
+              <FooterLink href="https://www.linkedin.com/company/trackd%C3%A9chets-minist%C3%A8re-de-la-transition-%C3%A9cologique/">
+                Page LinkedIn
+              </FooterLink>
+            </UnstyledListItem>
           </UnstyledList>
         </FooterLinks>
       </FooterInnerContainer>
