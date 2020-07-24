@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Container } from "../../Container";
 import { Typography } from "../../Typography";
+import badgeArrows from "./assets/badgeArrows.svg";
+import badgeShield from "./assets/badgeShield.svg";
 
 const BadgesContainer = styled.section`
   padding: ${(props) => props.theme.spacing(4)} 0;
@@ -36,6 +38,9 @@ const BadgeItem = styled.div`
   }
 `;
 const BadgeItemCircle = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 160px;
   height: 160px;
   background-color: ${(props) => props.theme.colors.common.white};
@@ -49,13 +54,17 @@ export function Badges() {
     <BadgesContainer>
       <BadgesInnerContainer>
         <BadgeItem>
-          <BadgeItemCircle />
+          <BadgeItemCircle>
+            <img src={badgeArrows} alt="" width="90" />
+          </BadgeItemCircle>
           <Typography variant="body1">
             Simplifier la traçabilité des déchets en temps réel
           </Typography>
         </BadgeItem>
         <BadgeItem>
-          <BadgeItemCircle />
+          <BadgeItemCircle>
+            <img src={badgeShield} alt="" width="90" />
+          </BadgeItemCircle>
           <Typography variant="body1">
             Apporter de la transparence et de la fiabilité dans la filière
             déchets

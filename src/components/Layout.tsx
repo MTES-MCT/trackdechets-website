@@ -69,6 +69,10 @@ body {
   line-height: ${(props) => props.theme.typography.body2.lineHeight};
   color: ${(props) => props.theme.colors.text.main};
 }
+
+img {
+  max-width: 100%;
+}
 `;
 
 interface LayoutProps {

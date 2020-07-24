@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Button } from "../../Button";
 import { Container } from "../../Container";
 import { Typography } from "../../Typography";
+import illustrationHero from "./assets/illustrationHero.png";
 
 const HeroContainer = styled.section`
   padding: ${(props) => props.theme.spacing(6)} 0;
@@ -52,7 +53,7 @@ export function Hero() {
     <HeroContainer>
       <HeroInnerContainer>
         <HeroIllustration>
-          <img src="https://placehold.it/630x340" alt="" />
+          <img src={illustrationHero} alt="" width="640" />
         </HeroIllustration>
         <HeroContent>
           <HeroHeading>

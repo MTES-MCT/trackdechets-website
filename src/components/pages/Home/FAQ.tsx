@@ -4,6 +4,7 @@ import { Container } from "../../Container";
 import { Typography } from "../../Typography";
 import { Link } from "../../Link";
 import { Question, QuestionQuestion, QuestionAnswer } from "../../Question";
+import illustrationFAQ from "./assets/illustrationFAQ.svg";
 
 const FAQContainer = styled.section`
   padding-top: ${(props) => props.theme.spacing(6)};
@@ -86,7 +87,7 @@ export function FAQ() {
                 Consultez notre FAQ.
               </Link>
             </QuestionQuestion>
-            <img src="https://placehold.it/500x290" alt="" />
+            <img src={illustrationFAQ} alt="" />
           </Question>
         </FAQQuestions>
       </FAQInnerContainer>
