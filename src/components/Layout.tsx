@@ -82,7 +82,17 @@ interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
   return (
     <ThemeProvider theme={theme}>
-      <Helmet title="Trackdéchets | La traçabilité des déchets en toute sécurité" />
+      <Helmet
+        title="Trackdéchets | La traçabilité des déchets en toute sécurité"
+        htmlAttributes={{ lang: "fr" }}
+        meta={[
+          {
+            name: "description",
+            content:
+              "Trackdéchets a vocation à simplifier la gestion de vos déchets dangereux au quotidien : 0 papier, traçabilité en temps réel, informations regroupées sur un outil unique, vérification des prestataires.",
+          },
+        ]}
+      />
       <GlobalStyle />
       {children}
     </ThemeProvider>
