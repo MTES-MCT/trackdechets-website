@@ -13,7 +13,7 @@ export function Newsletter() {
   return (
     <Section>
       <NewsletterInnerContainer>
-        <Button endIcon={<RiMailLine />}>
+        <Button size="large" endIcon={<RiMailLine />}>
           S'inscrire à la newsletter Trackdéchets
         </Button>
       </NewsletterInnerContainer>

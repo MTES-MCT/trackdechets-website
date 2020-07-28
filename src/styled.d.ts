@@ -13,6 +13,11 @@ declare module "styled-components" {
         lineHeight: string;
         fontWeight: string;
       };
+      h3: {
+        fontSize: string;
+        lineHeight: string;
+        fontWeight: string;
+      };
       body1: {
         fontSize: string;
         lineHeight: string;

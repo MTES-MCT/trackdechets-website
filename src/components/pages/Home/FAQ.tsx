@@ -9,7 +9,7 @@ import illustrationFAQ from "./assets/illustrationFAQ.svg";
 const FAQQuestions = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: ${(props) => props.theme.spacing(4)};
+  grid-gap: ${(props) => props.theme.spacing(8)};
 
   @media ${(props) => props.theme.breakpoints.up("medium")} {
     grid-template-columns: repeat(2, 1fr);

@@ -62,7 +62,7 @@ export function Footer() {
           </FooterSummaryContent>
         </FooterSummary>
         <FooterLinks>
-          <Typography>
+          <Typography gutterBottom>
             <strong>À propos de Trackdéchets</strong>
           </Typography>
           <UnstyledList>

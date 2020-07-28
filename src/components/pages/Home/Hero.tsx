@@ -48,7 +48,7 @@ const HeroAction = styled.div`
   text-align: center;
 `;
 const HeroIllustration = styled.div`
-  padding: ${(props) => props.theme.spacing(2)};
+  padding: ${(props) => props.theme.spacing(4)};
   background-color: ${(props) => props.theme.colors.gray.light};
   margin-bottom: ${(props) => props.theme.spacing(2)};
 

@@ -84,10 +84,10 @@ export function Profiles() {
             <img src={illustrationProducer} alt="" width="250" />
           </ProfilesItemIllustration>
           <ProfilesItemContent>
-            <Typography variant="body1" gutterBottom>
+            <Typography variant="h3" gutterBottom>
               <strong>Producteur</strong>
             </Typography>
-            <Typography>
+            <Typography variant="body1" gutterBottom>
               <strong>Qu’est-ce que je peux faire avec Trackdéchets ?</strong>
             </Typography>
             <ProfilesItemList>
@@ -113,7 +113,7 @@ export function Profiles() {
               </ListItem>
             </ProfilesItemList>
 
-            <Typography>
+            <Typography variant="body1" gutterBottom>
               <strong>En quoi ça simplifie mes pratiques ?</strong>
             </Typography>
             <ProfilesItemList>
@@ -136,11 +136,11 @@ export function Profiles() {
             <img src={illustrationCollector} alt="" width="250" />
           </ProfilesItemIllustration>
           <ProfilesItemContent>
-            <Typography variant="body1" gutterBottom>
+            <Typography variant="h3" gutterBottom>
               <strong>Professionnel des déchets</strong>
             </Typography>
 
-            <Typography>
+            <Typography variant="body1" gutterBottom>
               <strong>Qu’est-ce que je peux faire avec Trackdéchets ?</strong>
             </Typography>
             <ProfilesItemList>
@@ -159,7 +159,7 @@ export function Profiles() {
               </ListItem>
             </ProfilesItemList>
 
-            <Typography>
+            <Typography variant="body1" gutterBottom>
               <strong>En quoi ça simplifie mes pratiques ?</strong>
             </Typography>
             <ProfilesItemList>
@@ -184,11 +184,11 @@ export function Profiles() {
             <img src={illustrationTransporter} alt="" width="250" />
           </ProfilesItemIllustration>
           <ProfilesItemContent>
-            <Typography variant="body1" gutterBottom>
+            <Typography variant="h3" gutterBottom>
               <strong>Transporteur de déchets</strong>
             </Typography>
 
-            <Typography>
+            <Typography variant="body1" gutterBottom>
               <strong>Qu’est-ce que je peux faire avec Trackdéchets ?</strong>
             </Typography>
             <ProfilesItemList>
@@ -210,7 +210,7 @@ export function Profiles() {
               </ListItem>
             </ProfilesItemList>
 
-            <Typography>
+            <Typography variant="body1" gutterBottom>
               <strong>En quoi ça simplifie mes pratiques ?</strong>
             </Typography>
             <ProfilesItemList>

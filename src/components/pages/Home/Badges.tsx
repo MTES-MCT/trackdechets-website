@@ -25,7 +25,7 @@ const BadgeItem = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 20rem;
+  max-width: 22rem;
   width: 100%;
   margin-bottom: ${(props) => props.theme.spacing(4)};
 
@@ -57,7 +57,7 @@ export function Badges() {
           <BadgeItemCircle>
             <img src={badgeArrows} alt="" width="90" />
           </BadgeItemCircle>
-          <Typography variant="body1">
+          <Typography variant="h3">
             Simplifier la traçabilité des déchets en temps réel
           </Typography>
         </BadgeItem>
@@ -65,7 +65,7 @@ export function Badges() {
           <BadgeItemCircle>
             <img src={badgeShield} alt="" width="90" />
           </BadgeItemCircle>
-          <Typography variant="body1">
+          <Typography variant="h3">
             Apporter de la transparence et de la fiabilité dans la filière
             déchets
           </Typography>

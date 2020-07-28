@@ -4,12 +4,14 @@ import { Typography } from "./Typography";
 export const Question = styled.article``;
 
 export const QuestionQuestion = styled(Typography).attrs({
-  variant: "body1",
+  variant: "h3",
 })`
   margin-bottom: ${(props) => props.theme.spacing(2)};
 `;
 
-export const QuestionAnswer = styled(Typography)`
+export const QuestionAnswer = styled(Typography).attrs({
+  variant: "body1",
+})`
   margin-bottom: ${(props) => props.theme.spacing(1)};
 
   &:last-child {
@@ -17,6 +19,6 @@ export const QuestionAnswer = styled(Typography)`
   }
 
   @media ${(props) => props.theme.breakpoints.up("medium")} {
-    padding-left: ${(props) => props.theme.spacing(13)};
+    padding-left: ${(props) => props.theme.spacing(8)};
   }
 `;

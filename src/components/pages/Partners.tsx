@@ -26,7 +26,7 @@ import takeawaste from "./Partners/assets/takeawaste.png";
 const BecomePartnerQuestions = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: ${(props) => props.theme.spacing(4)};
+  grid-gap: ${(props) => props.theme.spacing(8)};
 
   @media ${(props) => props.theme.breakpoints.up("medium")} {
     grid-template-columns: repeat(2, 1fr);
@@ -71,7 +71,7 @@ export function Partners() {
           </Typography>
           <Typography gutterBottom>
             Trackdéchets est un outil de la Fabrique Numérique du MTES soutenu
-            par la direction générale de la prévention des risques (DGPR)
+            par la direction générale de la prévention des risques (DGPR).
           </Typography>
           <Typography gutterBottom>
             Trackdéchets a vocation à permettre la dématérialisation complète de
@@ -98,20 +98,20 @@ export function Partners() {
             <Question>
               <QuestionQuestion>Quels engagements ?</QuestionQuestion>
               <QuestionAnswer>
-                La chaine des BSD que vous gérez est 100% dématérialisée
+                La chaine des BSD que vous gérez est 100% dématérialisée.
               </QuestionAnswer>
               <QuestionAnswer>
                 Votre outil de gestion des BSD (ERP, etc.) est connecté à l'API
-                de Trackdéchets
+                de Trackdéchets.
               </QuestionAnswer>
               <QuestionAnswer>
                 Vous invitez vos clients et partenaires à devenir utilisateurs
                 de Trackdéchets, en utilisant les supports et documents mis à
-                votre disposition
+                votre disposition.
               </QuestionAnswer>
               <QuestionAnswer>
                 Vous vérifiez et validez les données de la "fiche entreprise"
-                qui sera proposée sur le produit (fin 2019)
+                qui sera proposée sur le produit (fin 2019).
               </QuestionAnswer>
             </Question>
 
@@ -120,19 +120,19 @@ export function Partners() {
               <QuestionAnswer>
                 Mise en visibilité lors des diverses communication Trackdéchets
                 (newsletter, présentations) et via le référencement sur le site
-                Trackdéchets via la page "Partenaires"
+                Trackdéchets via la page "Partenaires".
               </QuestionAnswer>
               <QuestionAnswer>
                 Appui de la DGPR pendant la phase de transition (contrôle
-                routiers des BSD)
+                routiers des BSD).
               </QuestionAnswer>
               <QuestionAnswer>
                 Participation à des ateliers exclusifs sur le produit à travers
-                notre comité produit restreint
+                notre comité produit restreint.
               </QuestionAnswer>
               <QuestionAnswer>
                 Accès à des informations privilégiées sur l'avancement et les
-                évolutions autour du produit
+                évolutions autour du produit.
               </QuestionAnswer>
             </Question>
           </BecomePartnerQuestions>
@@ -194,6 +194,7 @@ export function Partners() {
             as="a"
             href="mailto:emmanuel.flahaut@developpement-durable.gouv.fr"
             variant="secondary"
+            size="large"
           >
             Contactez-nous !
           </Button>

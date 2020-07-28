@@ -12,12 +12,17 @@ export const theme: DefaultTheme = {
       fontWeight: "bold",
     },
     h2: {
-      fontSize: "1.2rem",
+      fontSize: "1.5rem",
       lineHeight: "1.2",
       fontWeight: "bold",
     },
+    h3: {
+      fontSize: "1.5rem",
+      lineHeight: "1.6",
+      fontWeight: "normal",
+    },
     body1: {
-      fontSize: "1.2rem",
+      fontSize: "1.25rem",
       lineHeight: "1.6",
     },
     body2: {

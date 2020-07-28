@@ -89,7 +89,7 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
     switch (props.size) {
       case "large":
         return css`
-          font-size: 1.2rem;
+          font-size: ${props.theme.typography.body1.fontSize};
           padding: 0.8rem 2rem;
         `;
       case "normal":

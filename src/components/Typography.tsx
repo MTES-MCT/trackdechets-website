@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const Typography = styled.p<{
-  variant?: "h1" | "h2" | "body1" | "body2";
+  variant?: "h1" | "h2" | "h3" | "body1" | "body2";
   gutterBottom?: boolean;
 }>`
   margin: 0 0 ${(props) => (props.gutterBottom ? props.theme.spacing(1) : 0)} 0;
@@ -21,6 +21,12 @@ export const Typography = styled.p<{
           font-size: ${props.theme.typography.h2.fontSize};
           line-height: ${props.theme.typography.h2.lineHeight};
           font-weight: ${props.theme.typography.h2.fontWeight};
+        `;
+      case "h3":
+        return css`
+          font-size: ${props.theme.typography.h3.fontSize};
+          line-height: ${props.theme.typography.h3.lineHeight};
+          font-weight: ${props.theme.typography.h3.fontWeight};
         `;
       case "body1":
         return css`
