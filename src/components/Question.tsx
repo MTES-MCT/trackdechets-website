@@ -11,6 +11,7 @@ export const QuestionQuestion = styled(Typography).attrs({
 
 export const QuestionAnswer = styled(Typography).attrs({
   variant: "body1",
+  color: "muted",
 })`
   margin-bottom: ${(props) => props.theme.spacing(1)};
 

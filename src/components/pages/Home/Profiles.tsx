@@ -90,7 +90,7 @@ export function Profiles() {
             <Typography variant="body1" gutterBottom>
               <strong>Qu’est-ce que je peux faire avec Trackdéchets ?</strong>
             </Typography>
-            <ProfilesItemList>
+            <ProfilesItemList color="muted">
               <ListItem>
                 Je peux éditer moi-même ou co-éditer mes Bordereaux de Suivi de
                 Déchets (BSD)
@@ -116,7 +116,7 @@ export function Profiles() {
             <Typography variant="body1" gutterBottom>
               <strong>En quoi ça simplifie mes pratiques ?</strong>
             </Typography>
-            <ProfilesItemList>
+            <ProfilesItemList color="muted">
               <ListItem>
                 Plus besoin de papier à préparer, transmettre, archiver
               </ListItem>
@@ -143,7 +143,7 @@ export function Profiles() {
             <Typography variant="body1" gutterBottom>
               <strong>Qu’est-ce que je peux faire avec Trackdéchets ?</strong>
             </Typography>
-            <ProfilesItemList>
+            <ProfilesItemList color="muted">
               <ListItem>
                 Je peux connecter mon outil / mon ERP à Trackdéchets afin de
                 recevoir et transmettre les informations de traçabilité en temps
@@ -162,7 +162,7 @@ export function Profiles() {
             <Typography variant="body1" gutterBottom>
               <strong>En quoi ça simplifie mes pratiques ?</strong>
             </Typography>
-            <ProfilesItemList>
+            <ProfilesItemList color="muted">
               <ListItem>
                 Plus besoin de papier à préparer, transmettre, archiver
               </ListItem>
@@ -191,7 +191,7 @@ export function Profiles() {
             <Typography variant="body1" gutterBottom>
               <strong>Qu’est-ce que je peux faire avec Trackdéchets ?</strong>
             </Typography>
-            <ProfilesItemList>
+            <ProfilesItemList color="muted">
               <ListItem>
                 Je peux signer l’enlèvement du déchet sur site de façon
                 dématérialisée
@@ -213,7 +213,7 @@ export function Profiles() {
             <Typography variant="body1" gutterBottom>
               <strong>En quoi ça simplifie mes pratiques ?</strong>
             </Typography>
-            <ProfilesItemList>
+            <ProfilesItemList color="muted">
               <ListItem>
                 Plus besoin de papier à préparer, transmettre, archiver
               </ListItem>

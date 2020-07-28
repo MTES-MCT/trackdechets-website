@@ -8,12 +8,12 @@ export const theme: DefaultTheme = {
   typography: {
     h1: {
       fontSize: "2rem",
-      lineHeight: "1.2",
+      lineHeight: "1.25",
       fontWeight: "bold",
     },
     h2: {
       fontSize: "1.5rem",
-      lineHeight: "1.2",
+      lineHeight: "1.25",
       fontWeight: "bold",
     },
     h3: {
@@ -48,6 +48,7 @@ export const theme: DefaultTheme = {
     },
     text: {
       main: "#1E1E1E",
+      light: "#383838",
     },
     gray: {
       dark: "#979797",

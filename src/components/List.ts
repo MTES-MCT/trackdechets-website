@@ -1,8 +1,22 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const List = styled.ul`
+export const List = styled.ul<{ color?: "inherit" | "muted" }>`
   margin: 0;
   padding: 0 0 0 ${(props) => props.theme.spacing(3)};
+
+  ${(props) => {
+    switch (props.color) {
+      case "muted":
+        return css`
+          color: ${props.theme.colors.text.light};
+        `;
+      case "inherit":
+      default:
+        return css`
+          color: inherit;
+        `;
+    }
+  }}
 `;
 export const ListItem = styled.li`
   margin-bottom: ${(props) => props.theme.spacing(1)};

@@ -3,8 +3,23 @@ import styled, { css } from "styled-components";
 export const Typography = styled.p<{
   variant?: "h1" | "h2" | "h3" | "body1" | "body2";
   gutterBottom?: boolean;
+  color?: "inherit" | "muted";
 }>`
   margin: 0 0 ${(props) => (props.gutterBottom ? props.theme.spacing(1) : 0)} 0;
+
+  ${(props) => {
+    switch (props.color) {
+      case "muted":
+        return css`
+          color: ${props.theme.colors.text.light};
+        `;
+      case "inherit":
+      default:
+        return css`
+          color: inherit;
+        `;
+    }
+  }}
 
   ${(props) => {
     switch (props.variant) {
