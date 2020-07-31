@@ -9,6 +9,7 @@ export const query = graphql`
       siteMetadata {
         title
         description
+        url
       }
     }
   }
@@ -17,7 +18,7 @@ export const query = graphql`
 export function SEO() {
   const {
     site: {
-      siteMetadata: { title, description },
+      siteMetadata: { title, description, url },
     },
   } = useStaticQuery(query);
 
@@ -33,12 +34,18 @@ export function SEO() {
         },
         {
           name: "description",
+          property: "og:description",
           content: description,
+        },
+        {
+          name: "url",
+          property: "og:url",
+          content: url,
         },
         {
           name: "image",
           property: "og:image",
-          content: trackdechets,
+          content: new URL(trackdechets, url).href,
         },
       ]}
     />
