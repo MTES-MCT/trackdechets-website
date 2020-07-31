@@ -21,6 +21,7 @@ export function SEO() {
       siteMetadata: { title, description, url },
     },
   } = useStaticQuery(query);
+  const image = new URL(trackdechets, url).href;
 
   return (
     <Helmet
@@ -38,14 +39,20 @@ export function SEO() {
           content: description,
         },
         {
-          name: "url",
           property: "og:url",
           content: url,
         },
         {
-          name: "image",
           property: "og:image",
-          content: new URL(trackdechets, url).href,
+          content: image,
+        },
+        {
+          property: "og:type",
+          content: "website",
+        },
+        {
+          property: "twitter:card",
+          content: "summary_large_image",
         },
       ]}
     />
