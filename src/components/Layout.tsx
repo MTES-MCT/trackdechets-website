@@ -14,6 +14,7 @@ import MarianneBoldWoff2 from "./assets/Marianne-Bold.woff2";
 import MarianneBoldWoff from "./assets/Marianne-Bold.woff";
 import MarianneExtraBoldWoff2 from "./assets/Marianne-ExtraBold.woff2";
 import MarianneExtraBoldWoff from "./assets/Marianne-Bold.woff";
+import trackdechets from "./assets/trackdechets.png";
 import { theme } from "../constants";
 
 const GlobalStyle = createGlobalStyle`
@@ -90,6 +91,10 @@ export function Layout({ children }: LayoutProps) {
             name: "description",
             content:
               "Trackdéchets a vocation à simplifier la gestion de vos déchets dangereux au quotidien : 0 papier, traçabilité en temps réel, informations regroupées sur un outil unique, vérification des prestataires.",
+          },
+          {
+            name: "og:image",
+            content: trackdechets,
           },
         ]}
       />
