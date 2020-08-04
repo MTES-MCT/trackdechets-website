@@ -5,9 +5,9 @@ import { Layout } from "../../Layout";
 import { Footer } from "../../Footer";
 import { Container } from "../../Container";
 import { Typography } from "../../Typography";
-import { Question, QuestionQuestion, QuestionAnswer } from "../../Question";
 import { Button } from "../../Button";
 import { Section, SectionHeading } from "../../Section";
+import { List, ListItem } from "../../List";
 import kerlog from "./assets/kerlog.png";
 import chimirec from "./assets/chimirec.png";
 import sarpi from "./assets/sarpi.png";
@@ -53,11 +53,8 @@ const PartnersLogosItem = styled.article`
   }
 `;
 
-const ContactHeading = styled(Typography).attrs({
-  as: "h2",
-  variant: "h2",
-})`
-  margin-bottom: ${(props) => props.theme.spacing(6)};
+const ContactButtonContainer = styled.div`
+  text-align: center;
 `;
 
 export function Partners() {
@@ -74,11 +71,10 @@ export function Partners() {
             par la direction générale de la prévention des risques (DGPR).
           </Typography>
           <Typography gutterBottom>
-            Trackdéchets a vocation à permettre la dématérialisation complète de
-            la chaine du BSD, y compris pour les transporteurs. Le produit est
-            en constante évolution et pourra permettre techniquement cette
-            dématérialisation plus rapidement que le pas de temps nécessaire à
-            une évolution de la réglementation.
+            Le produit Trackdéchets, évolue de manière régulière pour
+            s'enrichir. La dématérialisation de la traçabilité de bout en bout
+            est déjà possible techniquement, permettant d'anticiper les
+            évolutions réglementaires en cours.
           </Typography>
           <Typography>
             Ce partenariat acte l’engagement fort d’entreprises dans la démarche
@@ -95,46 +91,54 @@ export function Partners() {
           <SectionHeading>Devenir partenaire</SectionHeading>
 
           <BecomePartnerQuestions>
-            <Question>
-              <QuestionQuestion>Quels engagements ?</QuestionQuestion>
-              <QuestionAnswer>
-                La chaine des BSD que vous gérez est 100% dématérialisée.
-              </QuestionAnswer>
-              <QuestionAnswer>
-                Votre outil de gestion des BSD (ERP, etc.) est connecté à l'API
-                de Trackdéchets.
-              </QuestionAnswer>
-              <QuestionAnswer>
-                Vous invitez vos clients et partenaires à devenir utilisateurs
-                de Trackdéchets, en utilisant les supports et documents mis à
-                votre disposition.
-              </QuestionAnswer>
-              <QuestionAnswer>
-                Vous vérifiez et validez les données de la "fiche entreprise"
-                qui sera proposée sur le produit (fin 2019).
-              </QuestionAnswer>
-            </Question>
+            <div>
+              <Typography variant="h3" gutterBottom>
+                Quels engagements ?
+              </Typography>
+              <List>
+                <ListItem>
+                  La chaine des BSD que vous gérez est 100% dématérialisée.
+                </ListItem>
+                <ListItem>
+                  Votre outil de gestion des BSD (ERP, etc.) est connecté à
+                  l'API de Trackdéchets.
+                </ListItem>
+                <ListItem>
+                  Vous invitez vos clients et partenaires à devenir utilisateurs
+                  de Trackdéchets, en utilisant les supports et documents mis à
+                  votre disposition.
+                </ListItem>
+                <ListItem>
+                  Vous vérifiez et validez les données de la "fiche entreprise".
+                </ListItem>
+              </List>
+            </div>
 
-            <Question>
-              <QuestionQuestion>Quels bénéfices ?</QuestionQuestion>
-              <QuestionAnswer>
-                Mise en visibilité lors des diverses communication Trackdéchets
-                (newsletter, présentations) et via le référencement sur le site
-                Trackdéchets via la page "Partenaires".
-              </QuestionAnswer>
-              <QuestionAnswer>
-                Appui de la DGPR pendant la phase de transition (contrôle
-                routiers des BSD).
-              </QuestionAnswer>
-              <QuestionAnswer>
-                Participation à des ateliers exclusifs sur le produit à travers
-                notre comité produit restreint.
-              </QuestionAnswer>
-              <QuestionAnswer>
-                Accès à des informations privilégiées sur l'avancement et les
-                évolutions autour du produit.
-              </QuestionAnswer>
-            </Question>
+            <div>
+              <Typography variant="h3" gutterBottom>
+                Quels bénéfices ?
+              </Typography>
+              <List>
+                <ListItem>
+                  Mise en visibilité lors des diverses communication
+                  Trackdéchets (newsletter, présentations) et via le
+                  référencement sur le site Trackdéchets via la page
+                  "Partenaires".
+                </ListItem>
+                <ListItem>
+                  Appui de la DGPR pendant la phase de transition (contrôle
+                  routiers des BSD).
+                </ListItem>
+                <ListItem>
+                  Participation à des ateliers exclusifs sur le produit à
+                  travers notre comité produit restreint.
+                </ListItem>
+                <ListItem>
+                  Accès à des informations privilégiées sur l'avancement et les
+                  évolutions autour du produit.
+                </ListItem>
+              </List>
+            </div>
           </BecomePartnerQuestions>
         </Container>
       </Section>
@@ -143,25 +147,25 @@ export function Partners() {
           <SectionHeading>Nos partenaires actuels</SectionHeading>
           <PartnersLogos>
             <PartnersLogosItem>
-              <img src={kerlog} alt="Kerlog" />
+              <img src={kerlog} alt="Kerlog" width="140" />
             </PartnersLogosItem>
             <PartnersLogosItem>
-              <img src={chimirec} alt="Chimirec" />
+              <img src={chimirec} alt="Chimirec" width="120" />
             </PartnersLogosItem>
             <PartnersLogosItem>
               <img src={sarpi} alt="Sarpi-Veolia" />
             </PartnersLogosItem>
             <PartnersLogosItem>
-              <img src={seche} alt="Séché Environnement" />
+              <img src={seche} alt="Séché Environnement" width="160" />
             </PartnersLogosItem>
             <PartnersLogosItem>
-              <img src={trinov} alt="Trinov" />
+              <img src={trinov} alt="Trinov" width="120" />
             </PartnersLogosItem>
             <PartnersLogosItem>
-              <img src={hensel} alt="Hensel" />
+              <img src={hensel} alt="Hensel" width="110" />
             </PartnersLogosItem>
             <PartnersLogosItem>
-              <img src={alme} alt="Alme" />
+              <img src={alme} alt="Alme" width="180" />
             </PartnersLogosItem>
             <PartnersLogosItem>
               <img src={caktus} alt="Caktus" />
@@ -170,13 +174,13 @@ export function Partners() {
               <img src={aecr} alt="Arc en ciel recyclage" />
             </PartnersLogosItem>
             <PartnersLogosItem>
-              <img src={sarp} alt="Sarp Veolia" />
+              <img src={sarp} alt="Sarp Veolia" width="180" />
             </PartnersLogosItem>
             <PartnersLogosItem>
               <img src={colleco} alt="Colleco" />
             </PartnersLogosItem>
             <PartnersLogosItem>
-              <img src={eloenergie} alt="Elo Énergie" />
+              <img src={eloenergie} alt="Elo Énergie" width="120" />
             </PartnersLogosItem>
             <PartnersLogosItem>
               <img src={norauto} alt="Norauto" />
@@ -189,15 +193,17 @@ export function Partners() {
       </Section>
       <Section>
         <Container>
-          <ContactHeading>Envie de devenir partenaire ?</ContactHeading>
-          <Button
-            as="a"
-            href="mailto:emmanuel.flahaut@developpement-durable.gouv.fr"
-            variant="secondary"
-            size="large"
-          >
-            Contactez-nous !
-          </Button>
+          <SectionHeading>Envie de devenir partenaire ?</SectionHeading>
+          <ContactButtonContainer>
+            <Button
+              as="a"
+              href="mailto:emmanuel.flahaut@developpement-durable.gouv.fr"
+              variant="secondary"
+              size="large"
+            >
+              Contactez-nous !
+            </Button>
+          </ContactButtonContainer>
         </Container>
       </Section>
       <Footer />
