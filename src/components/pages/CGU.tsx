@@ -57,7 +57,7 @@ export function CGU() {
             Le service est développé et opéré par la Fabrique Numérique du
             Ministère de la Transition Écologique et Solidaire et du Ministère
             de la cohésion des territoires et des relations avec les
-            collectivités territoriales, membre du réseau d’incubateurs
+            collectivités territoriales, membre du réseau d’incubateurs{" "}
             <Link href="https://www.google.com/url?q=http://beta.gouv.fr/&amp;sa=D&amp;ust=1553532239086000">
               beta.gouv.fr
             </Link>
@@ -79,8 +79,9 @@ export function CGU() {
             </ListItem>
             <ListItem>d’éditer un pdf du bordereau émis</ListItem>
             <ListItem>
-              d’assurer la traçabilité du bordereau entre un producteur et un
-              collecteur ou un producteur et une installation de traitement
+              d’assurer la traçabilité du bordereau entre tous les acteurs de la
+              chaîne : producteur, transporteur, collecteur et/ou installation
+              de traitement.
             </ListItem>
             <ListItem>
               de conserver et d’archiver les bordereaux, de façon à éviter les
@@ -88,15 +89,14 @@ export function CGU() {
             </ListItem>
             <ListItem>
               de faciliter le reporting des données, par la création d’un
-              registre(*)
+              registre
             </ListItem>
-            <ListItem>l’accès à un tableau de bord par compte (*)</ListItem>
+            <ListItem>
+              l’accès à un tableau de bord statistiques par compte
+            </ListItem>
           </List>
           <Typography>
-            (*) fonctionnalités futures ou en cours de développement
-          </Typography>
-          <Typography>
-            L’utilisation de la plateforme est libre, facultative et gratuite.
+            L’utilisation de la plateforme est libre et gratuite.
           </Typography>
           <Typography>
             Les frais éventuels de connexion à un réseau sont à la charge de
@@ -185,8 +185,10 @@ export function CGU() {
           <Typography>
             La création d’un compte est réalisée en ligne via le service. Elle
             est relative à une personne physique représentant l’entreprise et
-            ayant autorité pour le faire. Pour bénéficier d’un compte sur le
-            service, il convient :
+            ayant autorité pour le faire. La création de compte se fait en 2
+            étapes : 1/ création de compte individuel associé à une adresse
+            email 2/ rattachement d'un compte à une entreprise. Pour bénéficier
+            d’un compte sur le service (étape 1), il convient :
           </Typography>
           <List>
             <ListItem>
@@ -199,12 +201,18 @@ export function CGU() {
             </ListItem>
           </List>
           <Typography>
+            La personne souhaitant créer un compte peut également rajouter un
+            justificatif en pièce-jointe qui peut être examiné par l’équipe en
+            charge du service afin de vérifier l’appartenance à l’entreprise
+            dont il sollicite le rattachement.
+          </Typography>
+          <Typography>
             Le compte est alors validé et les différentes fonctionnalités sont
             disponibles.
           </Typography>
           <Typography>
             Le service se réserve le droit de vérifier la corrélation d’un
-            compte avec une entreprise.
+            compte avec une entreprise (étape 2).
           </Typography>
           <Typography as="h3" variant="body1">
             <strong>B. Fonctionnalités</strong>
@@ -223,11 +231,20 @@ export function CGU() {
               collecteur ou un producteur et une installation de traitement
             </ListItem>
             <ListItem>de conserver et d’archiver les bordereaux</ListItem>
-            <ListItem>de visualiser le registre des déchets (*)</ListItem>
+            <ListItem>de visualiser le registre des déchets</ListItem>
             <ListItem>de vérifier un prestataire</ListItem>
-            <ListItem>de demander une aide en ligne (*)</ListItem>
+            <ListItem>de demander une aide en ligne</ListItem>
             <ListItem>
               d'accéder à un tableau de bord récapitulatif (*)
+            </ListItem>
+            <ListItem>
+              d’inviter des membres à rejoindre l’établissement et de définir
+              leurs droits
+            </ListItem>
+            <ListItem>
+              de gérer les paramètres de l’entreprise, notamment les données
+              publiques et privées liées à l’établissement (fiche entreprise,
+              nom usuel, identifiant GEREP, renouvellement du code de sécurité
             </ListItem>
           </List>
           <Typography>(*) fonctionnalités à venir</Typography>
@@ -258,10 +275,13 @@ export function CGU() {
           </Typography>
           <Typography>
             Lors du départ du déchet vers l’installation de collecte ou de
-            traitement, il est nécessaire de valider ledit bordereau afin d’ :
+            traitement (enlèvement), il est nécessaire que les 2 parties
+            prenantes valident ledit bordereau afin :
           </Typography>
           <List>
-            <ListItem>en éditer un exemplaire pour le transporteur,</ListItem>
+            <ListItem>
+              d'acter l'enlèvement effectif approuvé par le producteur
+            </ListItem>
             <ListItem>
               transférer ce bordereau en attente chez le prestataire,
             </ListItem>
@@ -296,14 +316,15 @@ export function CGU() {
             réglementaires.
           </Typography>
           <Typography>
-            Le transporteur appose sa signature physique sur l’espace réservé à
-            son emplacement sur le bordereau, valant prise en charge du déchet.
+            Si le BSD Trackdéchets est rematérialisé, le transporteur peut
+            apposer sa signature physique sur l’espace réservé à son emplacement
+            sur le bordereau, valant prise en charge du déchet.
           </Typography>
           <Typography>
             Le bordereau comporte les informations nécessaires pour que le
             destinataire puisse se rendre sur le service et valider la prise en
-            charge (ou non ) du déchet. (lien de connexion, SIRET de l'émetteur,
-            numéro du BSD, etc)
+            charge (ou non ) du déchet (lien de connexion, SIRET de l'émetteur,
+            numéro du BSD, etc).
           </Typography>
           <h3>
             Validation par le prestataire (installation de collecte et/ou
@@ -341,12 +362,8 @@ export function CGU() {
           </Typography>
           <Typography>
             Si celui-ci a un doute sur le fait qu’une entreprise avec laquelle
-            il envisage de travailler, il peut utiliser l’onglet “vérification
-            de prestataire” disponible sur la page d'accueil.
-          </Typography>
-          <Typography>
-            Vous entrez les informations que vous connaissez dans le formulaire
-            et une réponse vous sera apportée par mail.
+            il envisage de travailler, il peut consulter la fiche entreprise de
+            l'établissement concerné via le formulaire d'édition du BSD.
           </Typography>
           <h3>
             C. Données à caractère personnel et sécurité des systèmes
@@ -397,7 +414,7 @@ export function CGU() {
           </Typography>
           <Typography>
             Le service permet la mise en relation d’une autorité administrative
-            partenaire et d’un usager.L’envoi d’un dossier via le service ne
+            partenaire et d’un usager. L’envoi d’un dossier via le service ne
             garantit pas l’acceptation d’une demande.
           </Typography>
           <Typography>
@@ -414,9 +431,9 @@ export function CGU() {
           </Typography>
           <Typography>
             L’accès au service peut être suspendu sans information préalable ni
-            préavis, notamment pour des raisons de maitenance.L’indisponibilité
-            du service ne saurait ouvrir droit à aucune compensation quelle
-            qu’en soit sa nature.
+            préavis, notamment pour des raisons de maintenance.
+            L’indisponibilité du service ne saurait ouvrir droit à aucune
+            compensation quelle qu’en soit sa nature.
           </Typography>
           <Typography>
             L’opérateur se réserve également le droit de bloquer, sans
@@ -449,9 +466,9 @@ export function CGU() {
             <strong>Service tiers</strong>
           </Typography>
           <Typography>
-            Le service utilise Mailjet, un service français d’envoi d’e
-            courriers électroniques. Ce service tiers est hébergé en France et
-            dispose de ses propres modalités d’utilisation.
+            Le service utilise Mailjet, un service français d’envoi de courriers
+            électroniques. Ce service tiers est hébergé en France et dispose de
+            ses propres modalités d’utilisation.
           </Typography>
           <Typography>
             Pour résilier son inscription, l’utilisateur en fait la demande :
@@ -608,16 +625,13 @@ export function CGU() {
             territoires et des relations avec les collectivités territoriales,
             &nbsp;(1 place Carpeaux, 92800 Puteaux), avec l’appui de
             l’incubateur de services numériques (beta.gouv.fr) de la direction
-            interministérielle du numérique et du système d’information et de
-            communication de l’État (DINSIC).
+            du numérique (DINUM).
           </Typography>
           <Typography as="h3" variant="body1">
             <strong>Directeur de la publication</strong>
           </Typography>
-          <Typography as="h3" variant="body1">
-            <strong>
-              Monsieur le Directeur Général de la Prévention et des Risques
-            </strong>
+          <Typography>
+            Monsieur le Directeur Général de la Prévention et des Risques
           </Typography>
           <Typography as="h3" variant="body1">
             <strong>Prestataire d'hébergement</strong>
