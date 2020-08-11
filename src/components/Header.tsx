@@ -2,7 +2,6 @@ import * as React from "react";
 import styled from "styled-components";
 import { Link as RouterLink } from "gatsby";
 import { RiAccountCircleLine } from "react-icons/ri";
-import { Container } from "./Container";
 import { InlineList, InlineListItem } from "./List";
 import { Link } from "./Link";
 import { Button } from "./Button";
@@ -13,9 +12,10 @@ const HeaderContainer = styled.header`
   padding: ${(props) => props.theme.spacing(1)} 0;
   border-bottom: 1px solid ${(props) => props.theme.colors.gray.dark};
 `;
-const HeaderInnerContainer = styled(Container)`
+const HeaderInnerContainer = styled.div`
   display: flex;
   align-items: center;
+  padding: 0 ${(props) => props.theme.spacing(2)};
 `;
 const HeaderLogos = styled.div`
   white-space: nowrap;
