@@ -10,8 +10,15 @@ Ce dépôt contient les sources du site web de [Trackdéchets](https://trackdech
 
 ## Déploiement
 
-La branche `master` est automatiquement déployée via une [action GitHub](./.github/workflows/deploy.yml).
-Il est également possible de déployer manuellement avec la commande `npm run deploy`.
+Le site est automatiquement déployée comme une page GitHub (branche `gh-pages`) lorsqu'un nouveau commit est poussé sur la branche `master`.
+Ce déploiement est effectué via une [action GitHub](./.github/workflows/deploy.yml).
+
+Il est également possible de déployer manuellement avec les commandes suivantes :
+
+```
+npm run build
+npm run deploy
+```
 
 ## LICENCE
 
