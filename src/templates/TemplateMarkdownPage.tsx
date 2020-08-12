@@ -11,7 +11,7 @@ import {
   HASTNode,
 } from "../components";
 
-const CGUContainer = styled(Section)`
+const TemplateMarkdownPageContainer = styled(Section)`
   h1 {
     margin-top: 0;
     margin-bottom: ${(props) => props.theme.spacing(4)};
@@ -29,7 +29,7 @@ const CGUContainer = styled(Section)`
   }
 `;
 
-interface CGUProps {
+interface TemplateMarkdownPageProps {
   data: {
     markdownRemark: {
       htmlAst: HASTRoot;
@@ -37,20 +37,20 @@ interface CGUProps {
   };
 }
 
-export default function CGU({
+export default function TemplateMarkdownPage({
   data: {
     markdownRemark: { htmlAst },
   },
-}: CGUProps) {
+}: TemplateMarkdownPageProps) {
   return (
     <Layout>
       <Header />
 
-      <CGUContainer>
+      <TemplateMarkdownPageContainer>
         <Container>
           <HASTNode node={htmlAst} />
         </Container>
-      </CGUContainer>
+      </TemplateMarkdownPageContainer>
 
       <Footer />
     </Layout>
@@ -58,7 +58,7 @@ export default function CGU({
 }
 
 export const pageQuery = graphql`
-  query GetCGU($path: String!) {
+  query GetPageContent($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       htmlAst
     }
