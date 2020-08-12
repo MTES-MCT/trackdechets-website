@@ -95,7 +95,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 as="a"
-                href="https://trackdechets.beta.gouv.fr/signup"
+                href="https://app.trackdechets.beta.gouv.fr/signup"
               >
                 Créer un compte
               </Button>
@@ -103,7 +103,7 @@ export function Header() {
             <InlineListItem>
               <Button
                 as="a"
-                href="https://trackdechets.beta.gouv.fr/login"
+                href="https://app.trackdechets.beta.gouv.fr/login"
                 endIcon={<RiAccountCircleLine />}
               >
                 Se connecter

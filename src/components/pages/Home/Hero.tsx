@@ -78,7 +78,7 @@ export function Hero() {
                 variant="secondary"
                 size="large"
                 as="a"
-                href="https://trackdechets.beta.gouv.fr/signup"
+                href="https://app.trackdechets.beta.gouv.fr/signup"
               >
                 Créer un compte
               </Button>
