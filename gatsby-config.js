@@ -22,5 +22,12 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `partners-logos`,
+        path: path.join(__dirname, "static", "images", "partners"),
+      },
+    },
   ],
 };

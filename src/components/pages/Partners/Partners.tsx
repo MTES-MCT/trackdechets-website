@@ -8,20 +8,6 @@ import { Typography } from "../../Typography";
 import { Button } from "../../Button";
 import { Section, SectionHeading } from "../../Section";
 import { List, ListItem } from "../../List";
-import kerlog from "./assets/kerlog.png";
-import chimirec from "./assets/chimirec.png";
-import sarpi from "./assets/sarpi.png";
-import seche from "./assets/seche.png";
-import trinov from "./assets/trinov.png";
-import hensel from "./assets/hensel.png";
-import alme from "./assets/alme.jpg";
-import caktus from "./assets/caktus.png";
-import aecr from "./assets/aecr.png";
-import sarp from "./assets/sarp.png";
-import colleco from "./assets/colleco.png";
-import eloenergie from "./assets/elo-energie.png";
-import norauto from "./assets/norauto.png";
-import takeawaste from "./assets/takeawaste.png";
 
 const BecomePartnerQuestions = styled.div`
   display: grid;
@@ -57,7 +43,11 @@ const ContactButtonContainer = styled.div`
   text-align: center;
 `;
 
-export function Partners() {
+interface PartnersProps {
+  logos: Array<{ name: string; publicURL: string }>;
+}
+
+export function Partners({ logos }: PartnersProps) {
   return (
     <Layout>
       <Header />
@@ -146,48 +136,11 @@ export function Partners() {
         <Container>
           <SectionHeading>Nos partenaires actuels</SectionHeading>
           <PartnersLogos>
-            <PartnersLogosItem>
-              <img src={kerlog} alt="Kerlog" width="140" />
-            </PartnersLogosItem>
-            <PartnersLogosItem>
-              <img src={chimirec} alt="Chimirec" width="120" />
-            </PartnersLogosItem>
-            <PartnersLogosItem>
-              <img src={sarpi} alt="Sarpi-Veolia" />
-            </PartnersLogosItem>
-            <PartnersLogosItem>
-              <img src={seche} alt="Séché Environnement" width="160" />
-            </PartnersLogosItem>
-            <PartnersLogosItem>
-              <img src={trinov} alt="Trinov" width="120" />
-            </PartnersLogosItem>
-            <PartnersLogosItem>
-              <img src={hensel} alt="Hensel" width="110" />
-            </PartnersLogosItem>
-            <PartnersLogosItem>
-              <img src={alme} alt="Alme" width="180" />
-            </PartnersLogosItem>
-            <PartnersLogosItem>
-              <img src={caktus} alt="Caktus" />
-            </PartnersLogosItem>
-            <PartnersLogosItem>
-              <img src={aecr} alt="Arc en ciel recyclage" />
-            </PartnersLogosItem>
-            <PartnersLogosItem>
-              <img src={sarp} alt="Sarp Veolia" width="180" />
-            </PartnersLogosItem>
-            <PartnersLogosItem>
-              <img src={colleco} alt="Colleco" />
-            </PartnersLogosItem>
-            <PartnersLogosItem>
-              <img src={eloenergie} alt="Elo Énergie" width="120" />
-            </PartnersLogosItem>
-            <PartnersLogosItem>
-              <img src={norauto} alt="Norauto" />
-            </PartnersLogosItem>
-            <PartnersLogosItem>
-              <img src={takeawaste} alt="Take a waste" />
-            </PartnersLogosItem>
+            {logos.map(({ name, publicURL }, index) => (
+              <PartnersLogosItem key={index}>
+                <img src={publicURL} alt={name} />
+              </PartnersLogosItem>
+            ))}
           </PartnersLogos>
         </Container>
       </Section>
