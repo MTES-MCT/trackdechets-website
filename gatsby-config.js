@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   siteMetadata: {
     title: "Trackdéchets | La traçabilité des déchets en toute sécurité",
@@ -9,5 +11,16 @@ module.exports = {
         : "http://localhost:8000",
   },
   pathPrefix: "/trackdechets-website",
-  plugins: ["gatsby-plugin-react-helmet", "gatsby-plugin-styled-components"],
+  plugins: [
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-styled-components",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: path.join(__dirname, "src", "markdown-pages"),
+      },
+    },
+    `gatsby-transformer-remark`,
+  ],
 };
