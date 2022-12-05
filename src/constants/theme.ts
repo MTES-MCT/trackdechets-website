@@ -1,6 +1,6 @@
 import { DefaultTheme } from "styled-components";
 
-const breakpoints = {
+export const breakpoints = {
   small: "37.5rem", //600
   medium: "48rem", //772
   large: "62rem", //992
