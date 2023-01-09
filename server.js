@@ -14,7 +14,7 @@ app.use(
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        connectSrc: ["'self'", "formations.data.gouv.fr"],
+        connectSrc: ["'self'", "https://formations.trackdechets.beta.gouv.fr"],
         baseUri: "'self'",
         fontSrc: ["'self'", "https:", "data:"],
         frameAncestors: "'none'",
