@@ -23,6 +23,7 @@ export function SEO() {
   } = useStaticQuery(query);
   const image = new URL(trackdechets, url).href;
 
+  // csp are handled in server.js
   return (
     <Helmet
       title={title}
@@ -57,11 +58,6 @@ export function SEO() {
         {
           property: "twitter:card",
           content: "summary_large_image",
-        },
-        {
-          "http-equiv": "Content-Security-Policy",
-          content:
-            "default-src 'self *.trackdechets.beta.gouv.fr';base-uri 'self';font-src 'self' https: data:;frame-src youtube.com www.youtube.com statistiques.trackdechets.beta.gouv.fr 0806de2d.sibforms.com;img-src 'self' data:;object-src 'none';script-src 'self' 'unsafe-inline' stats.data.gouv.fr;script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
         },
         {
           "http-equiv": "X-Content-Type-Options",
