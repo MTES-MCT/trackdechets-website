@@ -138,7 +138,6 @@ export function Profiles() {
               alt="Collecteur de déchets"
               width="250"
               loading="lazy"
-              loading="lazy"
             />
           </ProfilesItemIllustration>
           <ProfilesItemContent>
