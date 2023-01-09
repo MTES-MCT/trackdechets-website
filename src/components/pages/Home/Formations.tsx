@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-
 import styled from "styled-components";
 import { Container } from "../../Container";
-
 import { SectionHeading } from "../../Section";
 import { Button } from "../../Button";
+
+const WEBINARS_URL = "https://formations.trackdechets.beta.gouv.fr";
 
 const dows = ["DIM", "LUN", "MAR", "MER", "JEU", "VEN", "SAM"];
 const months = [
@@ -110,7 +110,7 @@ const Webinar = ({ webinar }) => (
           <a href="{ webinar.visio_link }">Participer</a>
         </WebinarVisioLink>
       )}
-      <Button as="a" href="#">
+      <Button as="a" href={`${WEBINARS_URL}${webinar.ics}`}>
         Ajouter à mon calendrier
       </Button>
     </WebinarActions>
@@ -118,7 +118,7 @@ const Webinar = ({ webinar }) => (
 );
 
 export function Formations() {
-  const url = `//formations.trackdechets.beta.gouv.fr/api/webinars/`;
+  const url = `${WEBINARS_URL}/api/webinars/`;
 
   const [webinars, setWebinars] = useState([]);
   const [loading, setLoading] = useState(true);
