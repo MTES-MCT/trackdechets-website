@@ -129,12 +129,10 @@ export function Formations() {
       .then((res) => res.json())
       .then((data) => {
         setLoading(false);
-
         if (data.message === "Not Found") {
           setHasError(true);
           return;
         }
-
         setWebinars(data);
       })
       .catch((e) => {
