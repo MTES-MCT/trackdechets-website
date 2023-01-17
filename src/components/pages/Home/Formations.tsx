@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Container } from "../../Container";
 import { SectionHeading } from "../../Section";
 import { Button } from "../../Button";
+import { Loader } from "../../Loader";
 
 const WEBINARS_URL = "https://formations.trackdechets.beta.gouv.fr";
 
@@ -76,6 +77,7 @@ function padTo2Digits(num) {
   return String(num).padStart(2, "0");
 }
 
+
 const WebinarHour = ({ webinarDate }) => {
   const dt = new Date(webinarDate);
   return (
@@ -141,14 +143,7 @@ export function Formations() {
       });
   }, []);
 
-  if (loading) {
-    return <div>load</div>;
-  }
-
   if (hasError) {
-    return null;
-  }
-  if (!webinars?.length) {
     return null;
   }
 
@@ -156,10 +151,11 @@ export function Formations() {
     <FormationsWrapper>
       <Container>
         <SectionHeading>Nos prochaines formations</SectionHeading>
-
-        {webinars.map((webinar) => (
-          <Webinar webinar={webinar} key={webinar?.id} />
-        ))}
+        {!!loading && <Loader />}
+        {!!webinars?.length &&
+          webinars.map((webinar) => (
+            <Webinar webinar={webinar} key={webinar?.id} />
+          ))}
         <WebinarChannel>
           Retrouvez nos dernières formations sur notre
           <a href="https://www.youtube.com/@Trackdechets"> chaîne youtube </a>
