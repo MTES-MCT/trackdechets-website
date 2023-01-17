@@ -107,7 +107,7 @@ const Webinar = ({ webinar }) => (
     <WebinarActions>
       {webinar.visio_link && (
         <WebinarVisioLink>
-          <a href="{ webinar.visio_link }">Participer</a>
+          <a href={webinar.visio_link}>Participer</a>
         </WebinarVisioLink>
       )}
       <Button as="a" href={`${WEBINARS_URL}${webinar.ics}`}>
