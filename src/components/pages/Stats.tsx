@@ -47,9 +47,6 @@ export function Stats() {
     <Layout>
       <Container>
         <Section>
-          <SectionHeading>
-            Déchets dangereux tracés dans Trackdéchets
-          </SectionHeading>
           <Iframe
             src="https://statistiques.trackdechets.beta.gouv.fr"
             frameBorder="0"
