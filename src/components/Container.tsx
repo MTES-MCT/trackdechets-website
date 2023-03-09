@@ -5,3 +5,8 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 0 ${(props) => props.theme.spacing(2)};
 `;
+
+export const FullWidthContainer = styled.div`
+  margin: 0 auto;
+  padding: 0;
+`;

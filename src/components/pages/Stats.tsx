@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Layout } from "../Layout";
-import { Container } from "../Container";
-import { Section, SectionHeading } from "../Section";
+import { FullWidthContainer } from "../Container";
+import { Section } from "../Section";
 import { useMediaQuery } from "react-responsive";
 import { breakpoints } from "../../constants/theme";
 
@@ -29,23 +29,23 @@ const getHeight = () => {
   });
 
   if (isExtraLarge) {
-    return "4470";
+    return "6750";
   }
   if (isLarge) {
-    return "4700";
+    return "7000";
   }
 
   if (isSmall) {
-    return "5500";
+    return "7600";
   }
-  return "5800";
+  return "8870";
 };
 export function Stats() {
   const height = getHeight();
 
   return (
     <Layout>
-      <Container>
+      <FullWidthContainer>
         <Section>
           <Iframe
             src="https://statistiques.trackdechets.beta.gouv.fr"
@@ -53,7 +53,7 @@ export function Stats() {
             height={height}
           />
         </Section>
-      </Container>
+      </FullWidthContainer>
     </Layout>
   );
 }
