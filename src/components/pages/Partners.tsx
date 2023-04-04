@@ -10,6 +10,7 @@ const SaasPartnersLogos = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: ${(props) => props.theme.spacing(4)};
+  margin-bottom: 32px;
 
   @media ${(props) => props.theme.breakpoints.up("large")} {
     grid-template-columns: repeat(3, 1fr);
