@@ -25,7 +25,12 @@ app.use(
           "*.trackdechets.beta.gouv.fr",
         ],
         imgSrc: ["'self'", "data:"],
-        scriptSrc: ["'self'", "'unsafe-inline'", "stats.data.gouv.fr"],
+        scriptSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          "stats.data.gouv.fr",
+          "https://plausible.trackdechets.beta.gouv.fr/",
+        ],
         styleSrc: ["'self'", "https:", "'unsafe-inline'"],
       },
     },
