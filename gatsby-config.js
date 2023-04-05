@@ -46,7 +46,7 @@ module.exports = {
       resolve: `gatsby-plugin-plausible`,
       options: {
         domain: process.env.PLAUSIBLE_DOMAIN,
-        customDomain: `https://plausible.trackdechets.beta.gouv.fr`,
+        customDomain: `plausible.trackdechets.beta.gouv.fr`,
       },
     },
   ],
