@@ -43,22 +43,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-tagmanager`,
+      resolve: `gatsby-plugin-plausible`,
       options: {
-        postBody: [
-          {
-            type: `script`,
-            name: `matomo-tag-manager`,
-            attributes: {
-              type: `text/javascript`,
-            },
-            dangerousContent: `var _mtm = _mtm || [];
-                  _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
-                  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-                  g.type='text/javascript'; g.async=true; g.defer=true; g.src='https://stats.data.gouv.fr/js/container_j7nJr4FM_dev_753b5bfb24b2f6d74a683dd5.js';
-                  s.parentNode.insertBefore(g,s);`,
-          },
-        ],
+        domain: process.env.PLAUSIBLE_DOMAIN,
+        customDomain: `https://plausible.trackdechets.beta.gouv.fr`,
       },
     },
   ],
