@@ -4,7 +4,7 @@ const path = require("path");
 const fs = require("fs");
 
 const app = express();
-
+const analytics = "https://plausible.trackdechets.beta.gouv.fr/";
 app.use(
   helmet({
     frameguard: {
@@ -14,7 +14,11 @@ app.use(
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        connectSrc: ["'self'", "https://formations.trackdechets.beta.gouv.fr"],
+        connectSrc: [
+          "'self'",
+          "https://formations.trackdechets.beta.gouv.fr",
+          analytics,
+        ],
         baseUri: "'self'",
         fontSrc: ["'self'", "https:", "data:"],
         frameAncestors: "'none'",
@@ -29,7 +33,7 @@ app.use(
           "'self'",
           "'unsafe-inline'",
           "stats.data.gouv.fr",
-          "https://plausible.trackdechets.beta.gouv.fr/",
+          analytics,
         ],
         styleSrc: ["'self'", "https:", "'unsafe-inline'"],
       },
