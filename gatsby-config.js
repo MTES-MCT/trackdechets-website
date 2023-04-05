@@ -46,7 +46,10 @@ module.exports = {
       resolve: `gatsby-plugin-plausible`,
       options: {
         domain: process.env.PLAUSIBLE_DOMAIN,
-        customDomain: `plausible.trackdechets.beta.gouv.fr`,
+        // Currently when using a custom domain with self-hosted plausible, the script
+        // path will incorrectly point to index.js. Here we force the correct path...
+        // https://github.com/pixelplicity/gatsby-plugin-plausible/issues/49
+        customDomain: `plausible.trackdechets.beta.gouv.fr/js/script.js?original=`,
       },
     },
   ],
