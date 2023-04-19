@@ -6,17 +6,7 @@ import { Typography } from "../Typography";
 import { Button } from "../Button";
 import { Section, SectionHeading } from "../Section";
 
-const SaasPartnersLogos = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: ${(props) => props.theme.spacing(4)};
-  margin-bottom: 32px;
-
-  @media ${(props) => props.theme.breakpoints.up("large")} {
-    grid-template-columns: repeat(3, 1fr);
-  }
-`;
-const OtherPartnersLogos = styled.div`
+const PartnersLogos = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: ${(props) => props.theme.spacing(4)};
@@ -63,16 +53,16 @@ export function Partners({ saasLogos, otherLogos }: PartnersProps) {
             </Typography>
           </Container>
 
-          <SaasPartnersLogos>
+          <PartnersLogos>
             {saasLogos.map(({ name, publicURL }, index) => (
               <PartnersLogosItem key={index}>
                 <img src={publicURL} alt={name} />
               </PartnersLogosItem>
             ))}
-          </SaasPartnersLogos>
+          </PartnersLogos>
         </Container>
         <Container>
-          <Typography gutterBottom variant="body1">
+          <Typography variant="body3">
             Vous éditez un logiciel dont la connexion technique avec
             Trackdéchets est opérationelle ?<br />
             N'hésitez pas à nous écrire pour demander à être visible en tant que
@@ -101,13 +91,13 @@ export function Partners({ saasLogos, otherLogos }: PartnersProps) {
             contribué à co-constuire la plateforme pour développer des
             fonctionalités fidèles aux pratiques du terrain.
           </Typography>
-          <OtherPartnersLogos>
+          <PartnersLogos>
             {otherLogos.map(({ name, publicURL }, index) => (
               <PartnersLogosItem key={index}>
                 <img src={publicURL} alt={name} />
               </PartnersLogosItem>
             ))}
-          </OtherPartnersLogos>
+          </PartnersLogos>
         </Container>
       </Section>
     </Layout>

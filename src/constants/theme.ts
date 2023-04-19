@@ -41,6 +41,12 @@ export const theme: DefaultTheme = {
       fontSize: "1rem",
       lineHeight: "1.6",
     },
+    body3: {
+      fontSize: "1.25rem",
+      lineHeight: "1.6",
+      width: "75%",
+      margin: "2rem auto 2rem auto",
+    },
     emphasis: {
       fontSize: "1rem",
       lineHeight: "1.6",
