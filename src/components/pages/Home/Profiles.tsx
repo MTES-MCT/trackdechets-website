@@ -87,7 +87,7 @@ export function Profiles() {
             <Typography variant="h3" gutterBottom>
               <strong>Producteur</strong>
             </Typography>
-            <Typography variant="body1" gutterBottom>
+            <Typography variant="body4" gutterBottom>
               <strong>Qu’est-ce que je peux faire avec Trackdéchets ?</strong>
             </Typography>
             <ProfilesItemList color="muted">
@@ -113,7 +113,7 @@ export function Profiles() {
               </ListItem>
             </ProfilesItemList>
 
-            <Typography variant="body1" gutterBottom>
+            <Typography variant="body4" gutterBottom>
               <strong>En quoi ça simplifie mes pratiques ?</strong>
             </Typography>
             <ProfilesItemList color="muted">
@@ -145,7 +145,7 @@ export function Profiles() {
               <strong>Professionnel des déchets</strong>
             </Typography>
 
-            <Typography variant="body1" gutterBottom>
+            <Typography variant="body4" gutterBottom>
               <strong>Qu’est-ce que je peux faire avec Trackdéchets ?</strong>
             </Typography>
             <ProfilesItemList color="muted">
@@ -164,7 +164,7 @@ export function Profiles() {
               </ListItem>
             </ProfilesItemList>
 
-            <Typography variant="body1" gutterBottom>
+            <Typography variant="body4" gutterBottom>
               <strong>En quoi ça simplifie mes pratiques ?</strong>
             </Typography>
             <ProfilesItemList color="muted">
@@ -198,7 +198,7 @@ export function Profiles() {
               <strong>Transporteur de déchets</strong>
             </Typography>
 
-            <Typography variant="body1" gutterBottom>
+            <Typography variant="body4" gutterBottom>
               <strong>Qu’est-ce que je peux faire avec Trackdéchets ?</strong>
             </Typography>
             <ProfilesItemList color="muted">
@@ -220,7 +220,7 @@ export function Profiles() {
               </ListItem>
             </ProfilesItemList>
 
-            <Typography variant="body1" gutterBottom>
+            <Typography variant="body4" gutterBottom>
               <strong>En quoi ça simplifie mes pratiques ?</strong>
             </Typography>
             <ProfilesItemList color="muted">

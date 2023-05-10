@@ -2,7 +2,16 @@ import styled, { css } from "styled-components";
 
 export const Typography = styled.p<{
   bold?;
-  variant?: "h1" | "h2" | "h3" | "h4" | "body1" | "body2" | "emphasis";
+  variant?:
+    | "h1"
+    | "h2"
+    | "h3"
+    | "h4"
+    | "body1"
+    | "body2"
+    | "body3"
+    | "body4"
+    | "emphasis";
   gutterBottom?: boolean;
   centered?: boolean;
   color?: "inherit" | "muted";
@@ -74,18 +83,25 @@ export const Typography = styled.p<{
           width: ${props.theme.typography.body1.width}};
           margin: ${props.theme.typography.body1.margin}};
         `;
-      case "body3":
-        return css`
-          font-size: ${props.theme.typography.body3.fontSize};
-          line-height: ${props.theme.typography.body3.lineHeight};
-          width: ${props.theme.typography.body3.width}};
-          margin: ${props.theme.typography.body3.margin}};
-        `;
       case "body2":
       default:
         return css`
           font-size: ${props.theme.typography.body2.fontSize};
           line-height: ${props.theme.typography.body2.lineHeight};
+        `;
+      case "body3":
+        return css`
+          font-size: ${props.theme.typography.body3.fontSize};
+          // line-height: ${props.theme.typography.body3.lineHeight};
+          // width: ${props.theme.typography.body3.width}};
+          // margin: ${props.theme.typography.body3.margin}};
+        `;
+      case "body4":
+        return css`
+          font-size: ${props.theme.typography.body4.fontSize};
+          line-height: ${props.theme.typography.body4.lineHeight};
+          width: ${props.theme.typography.body4.width}};
+          margin: ${props.theme.typography.body4.margin}};
         `;
     }
   }};

@@ -98,7 +98,7 @@ Si celui-ci a un doute sur une entreprise avec laquelle il envisage de travaille
 
 ## 4.4 Suppression de compte
 
-Pour supprimer un compte utilisateur Trackdéchets, l'utilisateur peut envoyer sa demande par courriel à l'adresse contact@trackdechets.beta.gouv.fr.
+Pour supprimer un compte utilisateur Trackdéchets, l'utilisateur peut envoyer sa demande en passant par https://assistance.trackdechets.beta.gouv.fr/ (Autre question > Nous contacter).
 
 ## 4.5 Autres fonctionnalités
 
