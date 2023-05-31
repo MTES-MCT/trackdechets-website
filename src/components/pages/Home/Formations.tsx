@@ -28,13 +28,23 @@ const FormationsWrapper = styled.div`
 `;
 const WebinarBlock = styled.div`
   display: flex;
-  height: 100px;
+  height: auto;
   align-items: center;
   padding: 12px;
   margin-bottom: 12px;
+  justify-content: flex-start;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 1px -1px, rgba(0, 0, 0, 0.14) 0 1px 1px 0,
     rgba(0, 0, 0, 0.12) 0 1px 3px 0;
+  flex-direction: column;
+  @media ${(props) => props.theme.breakpoints.up("medium")} {
+    height: 100px;
+    flex-direction: row;
+  }
+`;
+const WebinarInfo = styled.div`
+  display: flex;
+  align-items: center;
 `;
 const WebinarDateWrapper = styled.div`
   display: flex;
@@ -42,6 +52,7 @@ const WebinarDateWrapper = styled.div`
   align-items: center;
   font-weight: bold;
   padding: 12px 24px;
+  width: 120px;
 `;
 const WebinarDow = styled.div`
   font-size: 24px;
@@ -52,11 +63,16 @@ const WebinarDom = styled.div`
   line-height: 24px;
   color: #0a76f6;
 `;
+const WebinarMonthYear = styled.div`
+  text-align: center;
+`;
 const WebinarHourWrapper = styled.div`
   margin-right: 12px;
 `;
 const WebinarTitle = styled.div`
   margin-right: 12px;
+  display: flex;
+  align-items: center;
 `;
 
 const WebinarActions = styled.div`
@@ -77,7 +93,6 @@ function padTo2Digits(num) {
   return String(num).padStart(2, "0");
 }
 
-
 const WebinarHour = ({ webinarDate }) => {
   const dt = new Date(webinarDate);
   return (
@@ -94,18 +109,20 @@ const WebinarDate = ({ webinarDate }) => {
     <WebinarDateWrapper>
       <WebinarDow>{dows[dt.getDay()]}</WebinarDow>
       <WebinarDom>{dt.getDate()}</WebinarDom>
-      <span>
+      <WebinarMonthYear>
         {months[dt.getUTCMonth()]} {dt.getFullYear()}
-      </span>
+      </WebinarMonthYear>
     </WebinarDateWrapper>
   );
 };
 
 const Webinar = ({ webinar }) => (
   <WebinarBlock>
-    <WebinarDate webinarDate={webinar.scheduled_at} />
-    <WebinarHour webinarDate={webinar.scheduled_at} />
-    <WebinarTitle>{webinar.title}</WebinarTitle>
+    <WebinarInfo>
+      <WebinarDate webinarDate={webinar.scheduled_at} />
+      <WebinarHour webinarDate={webinar.scheduled_at} />
+      <WebinarTitle>{webinar.title}</WebinarTitle>
+    </WebinarInfo>
     <WebinarActions>
       {webinar.visio_link && (
         <WebinarVisioLink>
