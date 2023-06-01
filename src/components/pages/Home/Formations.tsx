@@ -29,16 +29,16 @@ const FormationsWrapper = styled.div`
 const WebinarBlock = styled.div`
   display: flex;
   height: auto;
-  align-items: center;
+
   padding: 12px;
   margin-bottom: 12px;
   justify-content: flex-start;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.2) 0 2px 1px -1px, rgba(0, 0, 0, 0.14) 0 1px 1px 0,
-    rgba(0, 0, 0, 0.12) 0 1px 3px 0;
+  rgba(0, 0, 0, 0.12) 0 1px 3px 0;
   flex-direction: column;
   @media ${(props) => props.theme.breakpoints.up("medium")} {
-    height: 100px;
+    height: 120px;
     flex-direction: row;
   }
 `;
