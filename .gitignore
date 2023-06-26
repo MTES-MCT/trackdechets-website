@@ -109,3 +109,6 @@ public
 # Intellij Files
 *.iml
 .idea
+
+
+.nvmrc
