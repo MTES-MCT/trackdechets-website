@@ -63,7 +63,9 @@ Les logos font entre 180 et 220 pixels de largeur, en cas de doute commencez par
 
 Il est possible d'uploader un logo directement sur GitHub :
 
-- [Uploader un logo dans `content/partners`](https://github.com/MTES-MCT/trackdechets-website/upload/master/content/partners)
+- [Uploader le logo d'un "Éditeurs de logiciels partenaires" dans `content/partners/saas`](https://github.com/MTES-MCT/trackdechets-website/upload/master/content/partners/saas)
+- [Uploader le logo d'un "Autres partenaires historiques" dans `content/partners/others`](https://github.com/MTES-MCT/trackdechets-website/upload/master/content/partners/others)
+
 
 ## Ajouter une bannière d'incident
 
